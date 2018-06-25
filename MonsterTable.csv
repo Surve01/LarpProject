@@ -1,0 +1,13 @@
+C0001,S0000,"Giant, Verbeeg",Monster,Uncommon,Yes,Hills or Mountains, A giant sized humanoid with massive arms.  The Verbeeg stands nearly 12 feet tall.,,Throw spell packets to represent the boulders. A Verbeeg Chieftan will inflict an additional point of damage his fists or his weapons,Throw Boulder:  The giant can throw large boulders that inflict 5 points of damage.,
+C0002,S0000,Gnoll,Goblinoid/Humanoid, Common,yes,"Forests, Plains, Subterranian","A 7 foot tall humanoid with a hairy body and the head of a dog or Hyena.  The hair is brownish in color with black  patches.  Flind?s are larger versions of regular Gnolls, a foot or two taller and more muscular.",,"Tribe or pack-oriented hu- manoids.  Gnolls (and their larger cousins, the Flinds) are very agressive, pack oriented, and evil.  They have their own tounge, and often learn goblin as well.
+Gnolls have shamanistic spellcasters and witch doctors as well.",," A gnoll of 5th level or above is likely to have
+a Resist Charm  or Resist sleep.  Gnolls of 7th level or above will have both."
+C0003,S0000,Gnome,  Humanoid,Uncommon,Yes,"Any, usually Hills, Mountains, or Subterranian","A 3 to 4 foot tall humanoid that looks very much
+like a dwarf.   Gnomes are usually dressed in colorful garments of reds, greens, blues and browns.  They have very little hair on the rop of their heads and most often they look much older than they really are.",," A race of miners and crafts- man, similar to Dwarves, but of a less practical or more fanciful nature. Generally considered a “goodly” race.",,"  Gnomes are a highly magic resist species.
+Most gnomes of third level will have a resist charm or resist sleep, and at 4th, most will have both.
+Like their dwarven cousins, they are stout individuals, possessed of a tough constitution.  Gnomes may have a drug tolerance for every 3 levels they have attained."
+C0004,S0000,Goblin,Humanoid,Common,Yes,Any," A 4 foot tall ugly lookiing humanoid witha slightly
+yellowish hue to their skin."," A created or summoned con- struct creature.  Made to serve it?s creator as a powerful protec- tor or killing machine, or to perform any tasks it is capable of.
+Not terribly intelligent (about as intelligent as a child or kobold) and never thinks for itself.","Follow your orders literally and without much in- terpretation.  Pursue enemies relentlessly, and show no fear (not capable of it)",,
+C0005,S0000,"Golem, Clay",Created Creature,Very Rare,no,Any,"  A 12 foot tall creature that looks like a giant clay
+statue.  May be as attractive or hideous as the creator made it.",,,,
