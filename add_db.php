@@ -23,7 +23,7 @@
         echo "Record inserted successfully";  
       }
     else {
-          echo "unsuccess";
+          echo "unsuccessful";
         }
       //mysqli.close($link);
     ?>
