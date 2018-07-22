@@ -7,13 +7,13 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        
+        <?php include "../Controllers/GetCreatureData.php"; ?>
         <title>Add/Edit Creatures</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script type="text/javascript">
             $(document).ready(function(){
-//                $('#editCreature').hide();
-//        $("#addEditArchetype").hide();
+              $('#editCreature').hide();
+        $("#addEditArchetype").hide();
             
     $("#showAdd").click(function(){
         $("#addCreauture").show();
@@ -40,13 +40,37 @@ and open the template in the editor.
         
         
         <div class ="Container">
+            
+                <?php  $nameList = GetCreatureNames();
+                          
+                        //  print_r($nameList);
+                          ?>
             <button class="button"  id="showAdd">Add Creature</button>
             <button class="button"  id="showEdit">Edit Creature</button>
             <button class="button"  id="showArcheType">Add/Edit Archetype</button>
             
             <div   class="addEdit" id="addCreauture">1</div>
             
-            <div  class="addEdit" id="editCreature">2</div>
+            <div  class="addEdit" id="editCreature">2
+                <form>
+                      <select  name ="creatureNameSelection" class="creatureInput" id="creatureNameDropDown">
+                          <option selected="selected">Choose one</option>
+                          <?php
+                          foreach($nameList as $name)
+                          {
+                              ?>
+                          <option value="<?php echo $name; ?>"><?php echo $name; ?></option>
+                                  <?php
+                          }
+                          
+                          ?>
+                          
+                          ?>
+            
+                      </select>
+                </form>
+             
+            </div>
             
             <div class="addEdit" id="addEditArchetype">3</div>
              

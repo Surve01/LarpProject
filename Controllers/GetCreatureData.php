@@ -21,5 +21,25 @@ $data = Array();
     return CallAPI("GET", $url+"getCreatureData", $data );
     
 }
-           
+
+ function GetCreatureNames()
+{
+     
+     global $url;
+            
+ $results = json_decode(CallAPI("GET", "http://localhost:8080/LARP/api/getCreatureData/getCreatureNames", $data=""),TRUE);  
+    
+     $resultList = array();
+     
+     foreach ($results as $result)
+        {
+            foreach($result as $fineResult)
+            {
+                $resultList[] = $fineResult;
+            }
+        }
+      //  print_r($resultList);
+  return $resultList;
+}
+
 ?>
