@@ -11,14 +11,25 @@
  *
  * @author aejan
  */
-static $url = "http://localhost:8080/LARP/api/";
+static $url = "http://localhost:8080/LARP/api/getCreatureData/";
 $data = Array();
 
  function GetCreatureTypes()
 {
      
-     global $url, $data;
-    return CallAPI("GET", $url+"getCreatureData", $data );
+     global $url;
+    $results = json_decode(CallAPI("GET",$url."getCreatureTypes", $data=""),TRUE);  
+     $resultList = array();
+     
+     foreach ($results as $result)
+        {
+            foreach($result as $fineResult)
+            {
+                $resultList[] = $fineResult;
+            }
+        }
+      //  print_r($resultList);
+  return $resultList;
     
 }
 

@@ -53,7 +53,7 @@ and open the template in the editor.
             
             <div  class="addEdit" id="editCreature">2
                 <form>
-                      <select  name ="creatureNameSelection" class="creatureInput" id="creatureNameDropDown">
+                    <select  onselect=""name ="creatureNameSelection" class="creatureInput" id="creatureNameDropDown">
                           <option selected="selected">Choose one</option>
                           <?php
                           foreach($nameList as $name)
