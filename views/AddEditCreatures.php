@@ -72,7 +72,19 @@ and open the template in the editor.
              
             </div>
             
-            <div class="addEdit" id="addEditArchetype">3</div>
+            <div class="addEdit" id="addEditArchetype">
+                
+                <?php
+                
+                 $creature =                          GetCreatureByName("Gnome");
+                
+                print_r($creature);
+      
+                $archetypes = GetCreatureArchetypes($creature[0]['creatureId']);
+                
+                Print_r($archetypes)
+                ?>
+                3</div>
              
              
         </div>

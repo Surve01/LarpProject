@@ -14,6 +14,8 @@
 static $url = "http://localhost:8080/LARP/api/getCreatureData/";
 $data = Array();
 
+
+//returns Array of distinct creature types
  function GetCreatureTypes()
 {
      
@@ -32,7 +34,7 @@ $data = Array();
   return $resultList;
     
 }
-
+//rteuirns Array of creature names
  function GetCreatureNames()
 {
      
@@ -52,5 +54,46 @@ $data = Array();
       //  print_r($resultList);
   return $resultList;
 }
+function GetCreatureByName(String $name)
+{
+     
+     global $url;
+            
+ $results = json_decode(CallAPI("GET", "http://localhost:8080/LARP/api/getCreatureData/getCreatureByName/".$name, $data=""),TRUE);  
 
+//     $resultList = array();
+//     
+//     foreach ($results as $result)
+//        {
+//            foreach($result as $fineResult)
+//            {
+//                $resultList[] = $fineResult;
+//            }
+//        }
+      //  print_r($resultList);
+return $results;
+    
+    
+}
+
+
+ function GetCreatureArchetypes(String $id)
+{
+     
+     global $url;
+            
+ $results = json_decode(CallAPI("GET", "http://localhost:8080/LARP/api/getCreatureData/GetArchtypeByCreatureID/".$id, $data=""),TRUE);  
+    
+     $resultList = array();
+     
+     foreach ($results as $result)
+        {
+            foreach($result as $fineResult)
+            {
+                $resultList[] = $fineResult;
+            }
+        }
+       print_r($resultList);
+  return $resultList;
+}
 ?>
