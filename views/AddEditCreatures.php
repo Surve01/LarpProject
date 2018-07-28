@@ -30,9 +30,34 @@ and open the template in the editor.
         $("#editCreature").hide();
         $("#addEditArchetype").show();
     });
+    
+    $('#prev').click(function(){
+   // alert('alert');
+        $.ajax({
+        type: 'post',
+        url: 'AjaxTest.php',        
+        data: {"action": 'GetCreatureTypes'},
+       dataType: 'json',
+        
+        success: function(response){
+       
+        alert(response);
+          
+            $('#id1').html(response[1]);
+          
+
+    },
+   error: function (xhr, ajaxOptions, thrownError) {
+        alert(xhr.status);
+        alert(thrownError);
+      //  alert(request.responsetext);
+        alert(data);
+   }
+    });
+    });
 });
             
-            
+     
             
          </script>
     </head>
@@ -49,7 +74,63 @@ and open the template in the editor.
             <button class="button"  id="showEdit">Edit Creature</button>
             <button class="button"  id="showArcheType">Add/Edit Archetype</button>
             
-            <div   class="addEdit" id="addCreauture">1</div>
+            <div    class="addEdit" id="addCreauture">1
+                <form id='addForm' method ='post' name ='addForm'>
+                  
+                    <div id='addEditPair' class='LabeFieldPair'> 
+                      <label>Creature Name</label>         
+                    <input id='addName' class='addEditText' name='addName' type='text' required>
+                  </div>
+                    
+                    
+                   <div  id='monsterBookPair' class='LabeFieldPair'> 
+                      <label>From Monster Book</label>         
+                    <input id='addMonsterBook' class='addEditText' type='text' required name='monsterBook'>
+                  </div>
+                  <div  id='addTerrainPair' class='LabeFieldPair'> 
+                      <label>Terrain</label>         
+                    <input id='addTerrain' class='addEditText' type='text' required name='terrain'>
+                  </div>
+                    <div  id='randomMonsterPair' class='LabeFieldPair'> 
+                      <label>Random Monster?</label>         
+                    <div id='randomMonster' class='addEditRadio' >
+                        <label>  <input type='radio' required name='randomMonster' value='yes' >Yes</label>
+                        <label>  <input type='radio' required name='randomMonster' value='no' >No</label>
+
+                        
+                    </div>
+                  </div>
+                
+                    <div  id='frequencyPair' class='LabeFieldPair'> 
+                      <label>Frequency</label>         
+                    <input id='addFrequency' class='addEditText' type='text' required name='frequency'>
+                  </div>
+                    
+                    <div  id="descriptionPair" class='LabeFieldPair'> 
+                      <label>Description</label>         
+                      <textarea name='description' class='addEditTextarea' id='addDescription'></textarea>
+                  </div>
+                    
+                    
+                    <div  id="backGroundPair" class='LabeFieldPair'> 
+                      <label>Background</label>         
+                      <textarea name='background' class='addEditTextarea' id='addbackground'></textarea>
+                  </div>
+                    
+                    <div  id="specialAttacks" class='LabeFieldPair'> 
+                      <label>Special Attacks</label>         
+                      <textarea name='specialAttacks' class='addEditTextarea' id='addSpecialAttacks'></textarea>
+                  </div>
+                    
+                     <div  id="specialDefense" class='LabeFieldPair'> 
+                      <label>Special Defense</label>         
+                      <textarea name='specialDefense' class='addEditTextarea' id='addspecialDefense'></textarea>
+                  </div>
+                </form>
+                
+                
+                
+            </div>
             
             <div  class="addEdit" id="editCreature">2
                 <form>
@@ -76,18 +157,29 @@ and open the template in the editor.
                 
                 <?php
                 
-                 $creature =                          GetCreatureByName("Gnome");
+                 $creature =                          GetCreatureByName("Gnoll");
                 
                 print_r($creature);
-      
-                $archetypes = GetCreatureArchetypes($creature[0]['creatureId']);
+      ?>
                 
-                Print_r($archetypes)
+                <br>
+                <br>
+                
+                <?php
+          //      $archetypes = GetCreatureArchetypes($creature[0]['creatureId']);
+                
+            //    echo
+            //    Print_r($archetypes)
                 ?>
                 3</div>
              
              
         </div>
+        
+        <button id='prev' > im a button</button>
+        
+        <p id ='id1'>THIS IS THE ID
+        </p>
         <?php
         // put your code here
         ?>

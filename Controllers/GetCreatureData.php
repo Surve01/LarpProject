@@ -31,8 +31,9 @@ $data = Array();
             }
         }
       //  print_r($resultList);
-  return $resultList;
-    
+        
+  return json_encode( $resultList);
+   
 }
 //rteuirns Array of creature names
  function GetCreatureNames()
@@ -54,6 +55,8 @@ $data = Array();
       //  print_r($resultList);
   return $resultList;
 }
+
+
 function GetCreatureByName(String $name)
 {
      
