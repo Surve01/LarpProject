@@ -37,7 +37,7 @@ and open the template in the editor.
         type: 'post',
         url: 'AjaxTest.php',        
         data: {"action": 'GetCreatureTypes'},
-       dataType: 'json',
+    //   dataType: 'json',
         
         success: function(response){
        
@@ -54,7 +54,58 @@ and open the template in the editor.
         alert(data);
    }
     });
+   
     });
+    
+     $('#submitAddNew').click(function(){
+            var creatureName = $('#addName').val();
+            var creatureType = $('#addType').val();
+            var creatureFrequency = $('#addFrequency').val();
+            var creatureRandomMonster =$('input[name=randomMonster]:checked').val();
+            var creatureTerrain = $('#addTerrain').val();
+            var creatureDescription = $('#addDescription').val();
+            var creatureBackground = $('#addbackground').val();
+            var creatureSpecialAttacks = $('#addSpecialAttacks').val();
+            var creatureSpecialDefenses = $('#addspecialDefense').val();
+            
+            var jsonArray = [{
+                "creatureName": creatureName,
+                "creatureType": creatureType,
+                "creatureFrequency": creatureFrequency,
+                "creatureRandomMonster": creatureRandomMonster,
+                "creatureTerrain": creatureTerrain,
+                "creatureDescription": creatureDescription,
+                "creatureBackground": creatureBackground,
+                "creatureSpecialAttacks": creatureSpecialAttacks,
+                "creatureSpecialDefenses": creatureSpecialDefenses              
+                                
+            }];
+            alert(JSON.stringify(jsonArray));
+                     $.ajax({
+                       //  contentType: "application/json; charset=utf-8",
+        type: 'post',
+        url: 'http://localhost:8080/LARP/api/creature',
+       // dataType: 'json',
+       
+       data: JSON.stringify(jsonArray),
+       
+        success: function(response){
+      // alert(jsonArray);
+        alert('yes');
+          
+            $('#id1').html('yay!!!');
+          
+
+    },
+   error: function (xhr, ajaxOptions, thrownError) {
+        alert(xhr.status);
+        alert(thrownError);
+      //  alert(request.responsetext);
+        alert('FAIL');
+   }
+     });
+ 
+     });
 });
             
      
@@ -82,6 +133,10 @@ and open the template in the editor.
                     <input id='addName' class='addEditText' name='addName' type='text' required>
                   </div>
                     
+                  <div id='creatureTypePair' class='LabeFieldPair'> 
+                      <label>Creature Type</label>         
+                    <input id='addType' class='addEditText' name='addCreatureType' type='text' required>
+                  </div>
                     
                    <div  id='monsterBookPair' class='LabeFieldPair'> 
                       <label>From Monster Book</label>         
@@ -129,7 +184,7 @@ and open the template in the editor.
                 </form>
                 
                 
-                
+                <Button id='submitAddNew'>Submit</button>
             </div>
             
             <div  class="addEdit" id="editCreature">2

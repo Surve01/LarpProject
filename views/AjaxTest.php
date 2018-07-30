@@ -7,11 +7,13 @@
  */
 
 
-echo filter_input(INPUT_POST,$_POST['action'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+$post =  filter_input(INPUT_POST,$_POST['action'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+
+echo $post;
       // if(!empty($_POST['action'])){
       //  i//f($_POST['action']==['GetCreatureTypes'])
         //{
-    //        print_r(GetCreatureTypes());
+      //  print_r(GetCreatureTypes());
         //}
         //if($_POST['action']==['GetCreatureByName'])
     //    {

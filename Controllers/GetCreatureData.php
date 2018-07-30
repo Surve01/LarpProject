@@ -32,7 +32,7 @@ $data = Array();
         }
       //  print_r($resultList);
         
-  return json_encode( $resultList);
+  return  $resultList;
    
 }
 //rteuirns Array of creature names
