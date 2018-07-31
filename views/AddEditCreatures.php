@@ -21,9 +21,9 @@ and open the template in the editor.
        $("#addEditArchetype").hide();
     });
     $("#showEdit").click(function(){
-        $("#addCreauture").hide();
-        $("#editCreature").show();
-        $("#addEditArchetype").hide();
+     //   $("#addCreauture").hide();
+        $("#editCreature").toggle();
+       // $("#addEditArchetype").hide();
     });
      $("#showArcheType").click(function(){
        $("#addCreauture").hide();
@@ -33,7 +33,7 @@ and open the template in the editor.
     
     $('#prev').click(function(){
    // alert('alert');
-        $.ajax({
+       $.ajax({
         type: 'post',
         url: 'AjaxTest.php',        
         data: {"action": 'GetCreatureTypes'},
@@ -68,7 +68,7 @@ and open the template in the editor.
             var creatureSpecialAttacks = $('#addSpecialAttacks').val();
             var creatureSpecialDefenses = $('#addspecialDefense').val();
             
-            var jsonArray = [{
+            var jsonArray = {
                 "creatureName": creatureName,
                 "creatureType": creatureType,
                 "creatureFrequency": creatureFrequency,
@@ -79,16 +79,16 @@ and open the template in the editor.
                 "creatureSpecialAttacks": creatureSpecialAttacks,
                 "creatureSpecialDefenses": creatureSpecialDefenses              
                                 
-            }];
+            };
             alert(JSON.stringify(jsonArray));
                      $.ajax({
-                       //  contentType: "application/json; charset=utf-8",
+                        contentType: "application/json",
         type: 'post',
         url: 'http://localhost:8080/LARP/api/creature',
-       // dataType: 'json',
+        dataType: 'json',
        
-       data: JSON.stringify(jsonArray),
-       
+    data: JSON.stringify(jsonArray),
+      // data: jsonArray,
         success: function(response){
       // alert(jsonArray);
         alert('yes');
@@ -128,6 +128,28 @@ and open the template in the editor.
             <div    class="addEdit" id="addCreauture">1
                 <form id='addForm' method ='post' name ='addForm'>
                   
+                         
+            <div  class="addEdit" id="editCreature">
+           
+                    <select  onselect=""name ="creatureNameSelection" class="creatureInput" id="creatureNameDropDown">
+                          <option selected="selected">Choose one</option>
+                          <?php
+                          foreach($nameList as $name)
+                          {
+                              ?>
+                          <option value="<?php echo $name; ?>"><?php echo $name; ?></option>
+                                  <?php
+                          }
+                          
+                          ?>
+                          
+                          ?>
+            
+                      </select>
+        
+             
+            </div>
+                    
                     <div id='addEditPair' class='LabeFieldPair'> 
                       <label>Creature Name</label>         
                     <input id='addName' class='addEditText' name='addName' type='text' required>
@@ -181,32 +203,16 @@ and open the template in the editor.
                       <label>Special Defense</label>         
                       <textarea name='specialDefense' class='addEditTextarea' id='addspecialDefense'></textarea>
                   </div>
+                    
+                      <Button id='submitAddNew'>Submit</button>
+                <button type="reset" value="Reset">Reset</button>W
                 </form>
                 
                 
                 <Button id='submitAddNew'>Submit</button>
+                <button type="reset" value="Reset">Reset</button>
             </div>
-            
-            <div  class="addEdit" id="editCreature">2
-                <form>
-                    <select  onselect=""name ="creatureNameSelection" class="creatureInput" id="creatureNameDropDown">
-                          <option selected="selected">Choose one</option>
-                          <?php
-                          foreach($nameList as $name)
-                          {
-                              ?>
-                          <option value="<?php echo $name; ?>"><?php echo $name; ?></option>
-                                  <?php
-                          }
-                          
-                          ?>
-                          
-                          ?>
-            
-                      </select>
-                </form>
-             
-            </div>
+       
             
             <div class="addEdit" id="addEditArchetype">
                 
