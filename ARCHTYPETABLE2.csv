@@ -1,0 +1,114 @@
+A0001,C0001,Base,"45, +5/level",45,,Hide + up to Leather,5 +20 to 40(20 avg),Fists or Weapon,"5/5 (fists) or by weapo
+n, +4",,Throw spell packets to represent the boulders. A Verbeeg Chieftan will inflict an additional point of damage his fists or his weapons
+A0002,C0001,Shaman,"35, +5/level",35,,Hide + up to Leather,5 + 10 to 30 (avg 10),Fists or Weapon,"5/5 (fists) or by
+weapon, +4","1st level shamans have 4 1st, 4 2nd, and 2 3rd level E/W spells.  Shamans gain spells in a staggered progression.  At each even level they will gain 2 spell slots of their highest level, and at each odd level they will gain 2 spell slots of the NEXT level.  (so a second level  shaman would have 4 spell slots of 1st through 3rd, and a third would have 4 first through third, and 2 fourth, etc).",
+A0003,C0002,Base,,,,,,,,,"Growl and snarl like a dog.  If you are outnumbered or outgunned, run away."
+A0004,C0002,Warrior,"17, +4/level",17,,None to Chain,0 to 66 (avg 22),Any weapon,"By weapon, +1,
++1/2 levels",Gnoll Warriors learn how to Critical Parry at 9th level. Gnoll warriors often learn a Stun Maneuver at 4th level (but not always).,
+A0005,C0002,Flind,"25, +5/level",25,,,0 to 66 (avg 30),Any weapon,"By weapon, +2,
++1/2 levels","A flind is a very large offshoot of the Gnoll.  They are usually found in command of a large number of Gnolls.  Flind?s learn a Critical Parry at 5th level, and a second Critical Parry at 6th.  They learn resistances as their smaller cousins.",
+A0006,C0002,Shaman,"14, +4/level",14,,,0 to 66 (avg 10),Any weapon,"By weapon, +1 
++1/3 levels",,
+A0007,C0002,Witch Doctor,13. +3/level,13,,None,None,"Any Single wea
+pon","By weapon, +1  
++1/4 levels",,
+A0008,C0002,Clerics,,,,,,,,"1st level shamans have 41st, 42nd, and 23rd level E/W spells.  Shamans gain spells in a staggered progression.  At each even level they will gain 2 spell slots of their highest level, and at each odd level they will gain 2 spell slots of the NEXT level.  (so a second level  shaman would have 4 spell slots of 1st through 3rd, and a third would have 4 first through third, and 2 fourth, etc).",
+A0009,C0002,Mages,,,,,,,,"1st level witch doctors have 41st, 42nd, and 23rd level E/W spells.  Witch doctors gain spells in a staggered pro- gression.  At each even level they will gain 2 spell slots of their highest level, and at each odd level they will gain 2 spell slots of the NEXT level.  (so a second level Witch doctor would have 4 spell slots of  1st through 3rd, and a third would have 4 first through third, and 2 fourth, etc).",
+A0010,C0003,Base,,,,Up to Leather,,"Any small weapon (no 
+two-weapon)",,,"Gnome spellcasters MAY have a subclass, with their spellcasting abilites modifed accordingly."
+A0011,C0003,Warrior,"9, +2/level",9,,,0 to 20 (avg 10),,"by weapon, +1/3 levels",Gnome warriors are very adept at avoiding the blows of larger species.  They gain a Critical Parry at 7th level and a second Critical Parry at 9th level.,
+A0012,C0003,Rogue,"7, +2/level",7,,,0 to 20 (avg 0),,"by weapon, +1/5 levels","Gnome Rogues arent so much expert assasins as they are good at fighting dirty in a melee.  Their small size makes it easy for them to land a suprise blow.  A 1st level gnome rogue has Backstab.  At 3rd level, he gains Knockout.  At 6th level, they learn Assasinate, and at 9th level, they learn Silent Kill.",
+A0013,C0003,Cleric,"7, +2/level",7,,,0 to 20 (avg 10),,"by weapon, +1/4 levels","1st level clerics have 41st, 42nd, and 23rd level E/W spells.  Clerics gain spells in a staggered progression.  At each even level they will gain 2 spell slots of their highest level, and at each odd level they will gain 2 spell slots of the NEXT level.  (so a second level cleric would have 4 spell slots of  1st through 3rd, and a third would have 4 first through third, and 2 fourth, etc).",
+A0014,C0003,Mage,"5, +2/level",5,,None,None,,by weapon,"1st level mages have 4 1st, 4 2nd, and 2 3rd level E/W spells.  Mages gain spells in a staggered progression.  At each even level they will gain 2 spell slots of their highest level, and at each odd level they will gain 2 spell slots of the NEXT level.  (so a second level mage would have 4 spell slots of  1st through 3rd, and a third would have 4 first through third, and 2 fourth, etc).",
+A0015,C0004,Base,,,,,,,,,
+A0016,C0004,Warrior,"8, +2/level",8,,None to Leather,0 to 40 (avg 8),Any one-handed weapons,"by weapon, +1/2 levels",,
+A0017,C0004,Shaman,"7, +2/level",7,,,0 to 40 (avg 8),Any one-handed weapons,"by weapon, +1/5 levels","1st level shamans have 41st, 42nd, and 23rd level E/W spells.  Shamans gain spells in a staggered progression.  At each even level they will gain 2 spell slots of their highest level, and at each odd level they will gain 2 spell slots of the NEXT level.  (so a second level shaman would have 4 spell slots of  1st through 3rd, and a third would have 4 first through third, and 2 fourth, etc).",
+A0018,C0004,Witch Doctor,"5, + 2/level",5,,None,None,Any one-handed weapons,by weapon,"1st level witch doctors have 4 1st, 4 2nd, and 2 3rd level E/W spells.  Witch doctors gain spells in a staggered progression.  At each even level they will gain 2 spell slots of their highest level, and at each odd level they will gain 2 spell slots of the NEXT level.  (so a second level witch doctor would have 4 spell slots of  1st through 3rd, and a third would have 4 first through third, and 2 fourth, etc).",
+A0019,C0005,Base,,,,Clay Body/Skin,80,Fists,7/7 + knockdown,,"Follow your orders literally and without much interpretation.  Pursue enemies relentlessly, and show no fear (not capable of it)."
+A0020,C0006,Base,,,,Thick Hide/Body,60,Fists,5/5 + knockdown (fists),,"Follow your orders literally and without much interpretation. Pursue enemies relentlessly, and show no fear (not capable of it)."
+A0021,C0007,Base,,,,Iron Body,200,Fists,10/10 + knockdown,,"Follow your orders literally and without much interpretation.  Pursue enemies relentlessly, and show no fear (not capable of it)"
+A0022,C0008,Base,,,,Stone Body,150,Fists,8/8 + knockdown (fists),,"Follow your orders literally and without much interpretation.  Pursue enemies relentlessly, and show no fear (not capable of it)"
+A0023,C0009,Base,,,,Fiery Body,25,Fists,"3/3 (fists, fire damage)",,
+A0024,C0010,Base,,,,Metal Body,100,"Any single, one handed weapon",By weapon,,
+A0025,C0011,Base,,,,Made from Stone,100,Fists,3/3 (fists),,Capable of following orders (even explicit orders) but not intelligent on its own. It does not reason through problems.. it merely follows the commands given it.  Somewhat slow and plodding when not commanded to move faster.
+A0026,C0012,Base,40,40,,Tough hide,30,Horns,3/3,,"Be angry, arrogant, and agressive.  Kill anything that threatens you.  The stone breath must be played by calling a hold."
+A0027,C0013,Base,60,60,,,,Claws or Bite,4/4 (claws) or 8 (bite),,"A griffon can carry two humanoids as riders, and can easily carry a fallen opponent away for a snack.  (if the victim is unconcious or dead, you can carry them off, struggling or living opponents will be left)"
+A0028,C0014,Base,15,15,1,,,Weapon (single weapon only),By weapon,,"Be agressive, slow, and dim witted.  Run when badly hurt or outnumbered.  Grimlok?s dont speak any language but their own of grunts and noises, so they dont understand surface folk."
+A0029,C0014,Warrior,+5/level,5,,,,Weapon,+1 for every 2 levels,"Some Grimlock?s are better warriors than the average hunter-gatherer.  These are usually the leaders and champions of the tribe.  Few grimlock?s ever go any higher than 4th level, and none has ever reached 7th.",
+A0030,C0015,Base,15,15,,,,Small Weapons only (short sword or smaller),By Weapon,,"Be shy, but not afraid to defend yourself.  Grippli are fascinated by shiny objects and will try to beg, borrow or steal them at any opportunity."
+A0031,C0016,Base,,,,,,,,,"Cold, calculating evil unead creature.
+A Lich may have researched magic, and usually carries a spell- book on it to memorize spells from.
+An Earth/Water lich may control other undead, as normal for a spellcaster.  A lich is considered to be the same level it was in life."
+A0032,C0016,Warrior,"8, +2/level",8,,None to Chain,0 to 66 (avg 10),Any one-handed weapons,"By weapon, +1/2 levels","Halfling warriors arent the stoutest in the land, but they are capable.  At 7th level, they learn a Critical Parry.  Many Halfling warriors (but not all) will learn the following skills: at 5th level - Backstab, at 7th level - Knockout.",
+A0033,C0016,Rogue,7 +3/2 levels,7,,None to Leather,0 to 30 (avg 0),Any one-handed weapons,"By weapon, +1/3 levels.","Halfling Rogues are thieves and cutpurses (and a few killers too) of legend.  They learn the following skills: 1st level - Backstab and Knockout.  4th Level - Assasinate.  9th level - Silent Kill.  They also know (starting at level 3) Lockpicking, equal in level to the level of the halfling -2.  Starting at 7th level, they know the Forensics skill, equal to the level of the halfling - 6.
+A Halfling Bard/spellcaster would have the same number of Bardic magic spell slots as a cleric or mage of the same level, and none of the skills above.",
+A0034,C0016,Cleric,7 +3/2 levels,7,,None to Chain,0 to 66 (avg 10),Any one-handed weapons,"By weapon, +1/3 levels","1st level clerics have 4 1st, 4 2nd, and 2 3rd level E/W spells.  Mages gain spells in a staggered progression.  At each even level they will gain 2 spell slots of their highest level, and at each odd level they will gain 2 spell slots of the NEXT level.  (so a second level cleric would have 4 spell slots of  1st through 3rd, and a third would have 4 first through third, and 2 fourth, etc).",
+A0035,C0016,Mage,"6, +1/level",6,,None,None,A single one-handed weapon,By weapon,"1st level mages have 41st, 42nd, and 23rd level E/W spells.  mages gain spells in a staggered progression.  At each even level they will gain 2 spell slots of their highest level, and at each odd level they will gain 2 spell slots of the NEXT level.  (so a second level mage would have 4 spell slots of  1st through 3rd, and a third would have 4 first through third, and 2 fourth, etc).",
+A0036,C0017,Base,40,40,,,,Claws,3/3 (claws),,
+A0037,C0018,Base,30,30,,,,Claws or Beak,4/4 (claws) or 5 (beak),,
+A0038,C0019,Base,45,45,,Tough Skin,10,Bite and Fiery Touch(see Attacks in Creature Table),3 + 6 Fire (9 Fire),,
+A0039,C0020,Base,25,25,,Hide,15,Claws or Beak,3/3 (claws) or 4 (beak),Relatively smart (at least as smart as a horse) and ferocious fighters when cornered.  Skittish when not feeling threatened. A hippogriff can carry of an unconcious or dead victim with ease.  (living or moving victims will be thought too much trouble and left),
+A0040,C0021,Base,,,,,,,,,
+A0041,C0021,Warrior,"15, +4/level",15,,None to Chain,0 to 66 (avg 20),Any weapon,"By weapon, +1, +1/2 levels",,
+A0042,C0021,Shaman,"10, +3/level",10,,None to Chain,0 to 66 (avg 20),Any single weapon,"by weapon +1, +1/3levels","1st level shamans have 41st, 42nd, and 23rd level E/W spells.  Shamans gain spells in a staggered progression.  At each even level they will gain 2 spell slots of their highest level, and at each odd level they will gain 2 spell slots of the NEXT level.  (so a second level shaman would have 4 spell slots of  1st through 3rd, and a third would have 4 first through third, and 2 fourth, etc).",
+A0043,C0021,Witch Doctor,"9, +2/level",9,,None,None,Any single weapon,"by weapon, +1","1st level witch doctors have 41st, 42nd, and 23rd level E/W spells.  Witch Doctors gain spells in a staggered progression.  At each even level they will gain 2 spell slots of their highest level, and at each odd level they will gain 2 spell slots of the NEXT level.  (so a second level witch doctor would have 4 spell slots of  1st through 3rd, and a third would have 4 first through third, and 2 fourth, etc).",
+A0044,C0022,Base,15,15,,Chitin Shell/Hide,25,Claws or Beak,3/3 (claws) or 5 (beak),,Be agressive and make clicking noises when you fight.  Try to drag someone off to eat them.
+A0045,C0023,Base,15,15,,Hide,10,Hooves,3/3 (hooves),,"Be skittish of people, but dont attack them unless attacked first.  Never let anyone try to get on you."
+A0046,C0024,Base,,,,,,,,,"Most humans speak only common.  Learned members of the race may speak elven and dwarven of a goblinoid tongue.
+Humans of all classes may have up to 20 training points of other skills per level they have achieved.
+Human casters may have subclasses, and their spell casting ability would be affected to conform with that subclass."
+A0047,C0024,Warrior,"10, +3/level",10,,None to Plate,0 to 120 (avg 25),Any Weapon,"by weapon +1, +1/2 levels","Humans make skilled warriors when they choose that profession.  They learn the following skills:
+6th level - Critical Parry.  9th Level - Deathstrike 10th level - Critical Parry",
+A0048,C0024,Rogue,"7, +2/level",7,,None to Chain,0 to 66 (avg 0),Any Weapon,"by weapon +1, +1/3 levels","Humans excellt at thievery and murder.  Human rogues learn the following skills:
+1st Level - Backstab.  2nd Level - Knockout.  5th Level - Assasinate.  9th level
+- Silent Kill.
+Humans Scouts also have all appropriate traps skills equal to their level -2, and tracking, but will never learn Silent Kill
+Human Assasins learn their rogue skills with the following modifications: 1st Level
+- Backstab and Knockout 4th Level - Assasinate, 8th Level - Silent Kill.  Assasins will also have the Disguise skill equel in level to their level - 2, and Handle Toxin.",
+A0049,C0024,Cleric,"9, +2/level",9,,None to Plate,0 to 120 (avg 20),Any Weapon,"by weapon +1, +1/3 levels","1st level clerics have 41st, 42nd, and 23rd level E/W spells.  Mages gain spells in a staggered progression.  At each even level they will gain 2 spell slots of their highest level, and at each odd level they will gain 2 spell slots of the NEXT level.  (so a second level cleric would have 4 spell slots of  1st through 3rd, and a third would have 4 first through third, and 2 fourth, etc).",
+A0050,C0024,Mage,"6, +1/level",6,,None,None,Any Single one-handed weapon,"by weapon, +1/5 levels","1st level mages have 41st, 42nd, and 23rd level E/W spells.  mages gain spells in a staggered progression.  At each even level they will gain 2 spell slots of their highest level, and at each odd level they will gain 2 spell slots of the NEXT level.  (so a second level mage would have 4 spell slots of  1st through 3rd, and a third would have 4 first through third, and 2 fourth, etc).",
+A0051,C0025,Base,10,10,,Hide,5,Small weapons (short sword or shorter),by weapon,,
+A0052,C0026,Base,,,,,,,,,"The Hydra body is played by one person, and the tail by another, as many people as deemed necessary play heads.  The heads can move up to 15 feet from the body, and it is the player of the body who must remind his heads to stay in close enough.  If all of the heads die, the creatre dies.  if the Body dies, the creature dies.  the creature may continue to fight even if the tail and all but one head are dead."
+A0053,C0026,Body,50,50,,Hide/Scales,30,"None, uses heads",,,
+A0054,C0026,Head,15,15,,,10,Bite,6 (bite),,
+A0055,C0026,Tail,25,25,,,15,Itself/swipe,7 + knockdown,,
+A0056,C0027,Base,20,20,,Tough Skin,5,Claws or Tail,"3/3 (claws) or 4 + poison (tail, see Attacks in creature table)",,"Angry, maliscious, evil little deformed creatures from the negative plane."
+A0057,C0028,Base,65,65,,,,Hands,Strangulation,,"To simulate strangling someone, strike them on the shoulder or in the chest with a short weapon, and announce that you are strangiing them.  Relentless killers when set to the task."
+A0058,C0029,Base,,,,,,,,,
+A0059,C0029,Warrior,"5, +2/level",5,,None to Leather,5 to 15 (avg 5),any one-handed weapon,"by weapon, +1/2 levels",,
+A0060,C0029,Shaman,"4, +2/level",4,,None to Leather,0 to 15 (avg 0),a single one-handed weapon,by weapon,"1st level shamans have 41st, 42nd, and 23rd level E/W spells.  Shamans gain spells in a staggered progression.  At each even level they will gain 2 spell slots of their highest level, and at each odd level they will gain 2 spell slots of the NEXT level.  (so a second level shamans would have 4 spell slots of 1st through 3rd, and a third would have 4 first through third, and 2 fourth, etc).",
+A0061,C0029,Witch Doctors,"3, +2/level",3,,None,None,a single one-handed weapon,by weapon,"1st level witch doctors have 41st, 42nd, and 23rd level E/W spells.  Witch doctors gain spells in a staggered progression.  At each even level they will gain 2 spell slots of their highest level, and at each odd level they will gain 2 spell slots of the NEXT level.  (so a second level witch doctor would have 4 spell slots of  1st through 3rd, and a third would have 4 first through third, and 2 fourth, etc).",
+A0062,C0030,Base,55,55,,Hide,10,"Any weapon, usually a dagger","by weapon, +2",,
+A0063,C0031,Base,5,5,,,,club/small staff,1,,
+A0064,C0032,Base,35,35,,Hide,10,Bite,7 (bite),,
+A0065,C0033,Base,50,50,,,,Claws or weapon,"5/5 (claws)  or by weapon, +2 (from strength)",,"Cold, calculating evil unead creature.
+A Lich may have researched magic, and usually carries a spellbook on it to memorize spells from.
+An Earth/Water lich may control other undead, as normal for a spellcaster.  A lich is considered to be the same level it was in life."
+A0066,C0034,Base,75,75,,,,Claws or weapon,"7/7 (claws)  or by weapon, +3 (from strength)",,"Cold, calculating evil unead creature.  A Greater Lich retains many of the skills it had in life.
+A Lich may have researched magic, and usually carries a spell- book on it to memorize spells from.
+An Earth/Water lich may control other undead, as normal for a spellcaster.  A lich is considered to be the same level it was in life."
+A0067,C0035,Base,,,,,,,,,Lizard men speak their own language (hisses and spits) and rarely learn to speak any other.  Forming the language for most humanoid tounges is very hard for the Lizard men to master.
+A0068,C0035,Warrior,"22, +4/level",22,,None to Leather,0 to 50 (avg 15),Bite or any weapon,"3 (bite) or by weapon, +2, +1/2 levels",,
+A0069,C0035,Shaman,"20, +3/level",20,,None to Leather,0 to 30 (avg 0),Bite or any single weapon,"3 (bite) or by weapon +1, +1/3 levels","1st level shamans have 41st, 42nd, and 23rd level E/W spells.  Shamans gain spells in a staggered progression.  At each even level they will gain 2 spell slots of their highest level, and at each odd level they will gain 2 spell slots of the NEXT level.  (so a second level shaman would have 4 spell slots of  1st through 3rd, and a third would have 4 first through third, and 2 fourth, etc).",
+A0070,C0036,Base,35,35,,Scale/Hide,30,Claws or Bite,5/5 (claws) or 8 (bite),,A tanner or leatherer can salvage up to 15 points of hide to make scale armor from the body of this creature.
+A0071,C0037,Base,45,45,,Hide,10,"Claws or Bite, Tail Spike( See Attacks in creature table)","5/5 (claws) or 5 (bite)
+3 no-armor (tail spike)",,"Cunnign animal predator.  Won't let itself get cornered and will run when outnumbered or outgunned.The Tali spikes from a manticore make excellent daggers, and can be harvested by a tanner or leatherer who is also a weaponsmith.  A dead manticore will have one salvageable spike for each volley it didnt fire yet that day.  (from 0 to 4) The manticore spike is a normal dagger in all respects, except that it is bone and thus cannot be withered or warped."
+A0072,C0038,Base,45,45,,Hide/Scales,20,Any weapon (no two weapon),"By weapon, +2",,
+A0073,C0039,Base,"50, +10/level",50,,Hide,15,Any weapon,"By weapon, +6",,
+A0074,C0040,Base,"30, +5/level",30,,Hide,10,Any weapon,"By weapon, +3",,
+A0075,C0041,Base,"35, +5/level",35,,Hide,10,Any weapon,"By weapon, +5",,
+A0076,C0042,Base,70,70,,,,Bite,5 (bite),,"Smart, Friendly, playful animals.  Like humans and other goodly humanoids and will often play with them.
+Rarely reveals itself for anything other than a real dog if possible."
+A0077,C0043,Base,25,25,,,,Fists,3/3 + disease,,
+A0078,C0044,Base,60,60,,,,Fists (or by weapon),"6/6 (fists) or by weapon, +3",,"Very powerful, but slow and plodding most of the time.  Can move quickly when it needs to, but rarely feels the need since few things can harm it."
+A0079,C0045,Base,35,35,,Scales/Hide,45,Bite,5 + poision (see creature table attacks),,To represent the poisonous spittle (see creature table attacks) use a spall packet.  It only affects the victim if they arent wearing armor and it strikes their body (not their possessions).
+A0080,C0045,Clerics,,,,,,,,"Casts spells as a 5th level cleric.  Has 4 spell slots of each level 1 through 5, and does not need a spellbook to memorize spells.",
+A0081,C0046,Base,30,30,,Scales/Hide,40,Bite,4 + poison,,
+A0082,C0046,Clerics,,,,,,,,"Casts spells as a 6th level cleric. Has 4 E/W spell  slots of each level 1 through 3, and does not need a spellbook to memorize spells.",
+A0083,C0046,Mages,,,,,,,,"Casts spells as a 6th level mage. Has 4 F/A spell slots of each level 1 through 3, and does not need a spellbook to memorize spells.",
+A0084,C0047,Base,25,25,,Scales/Hide,30,Bite,4 + poison,,
+A0085,C0047,Clerics,,,,,,,,"A Water Naga casts spellsa s a 4th level cleric, and has 4 E/W spell slots of levels 1 through 3.  They do not need spellbooks to memorize spells.",
+A0086,C0048,Base,50,50,,Hide (some may wear barding),"15 and as worn, up to 40 points",Hooves or Bite,4/4 (fire damage) (hooves) or 6 (bite),,Use a spell packet to simulate the Nightmare?s fire breath.
+A0087,C0049,Base,10,10,,,,by weapon (usually a thrusting weapon),by weapon,,
+A0088,C0050,Base,,,,,,,,,
+A0089,C0050,Clerics,,,,,,,,"Casts spells as a 10th level cleric, and has 4 spell slots of each level 1 through 6.  Does not need a spellbook to cast spells and may have researched magic due to their magical nature.  The Nymph casts spells as a Druid.",
