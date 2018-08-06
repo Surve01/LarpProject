@@ -7,7 +7,8 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <?php include "../Controllers/GetCreatureData.php"; ?>
+        <?php  
+        include "../PDO/PDOConection.php"?>
         <title>Add/Edit Creatures</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script type="text/javascript">
@@ -31,81 +32,7 @@ and open the template in the editor.
         $("#addEditArchetype").show();
     });
     
-    $('#prev').click(function(){
-   // alert('alert');
-       $.ajax({
-        type: 'post',
-        url: 'AjaxTest.php',        
-        data: {"action": 'GetCreatureTypes'},
-    //   dataType: 'json',
-        
-        success: function(response){
-       
-        alert(response);
-          
-            $('#id1').html(response[1]);
-          
-
-    },
-   error: function (xhr, ajaxOptions, thrownError) {
-        alert(xhr.status);
-        alert(thrownError);
-      //  alert(request.responsetext);
-        alert(data);
-   }
-    });
-   
-    });
     
-     $('#submitAddNew').click(function(){
-            var creatureName = $('#addName').val();
-            var creatureType = $('#addType').val();
-            var creatureFrequency = $('#addFrequency').val();
-            var creatureRandomMonster =$('input[name=randomMonster]:checked').val();
-            var creatureTerrain = $('#addTerrain').val();
-            var creatureDescription = $('#addDescription').val();
-            var creatureBackground = $('#addbackground').val();
-            var creatureSpecialAttacks = $('#addSpecialAttacks').val();
-            var creatureSpecialDefenses = $('#addspecialDefense').val();
-            
-            var jsonArray = {
-                "creatureName": creatureName,
-                "creatureType": creatureType,
-                "creatureFrequency": creatureFrequency,
-                "creatureRandomMonster": creatureRandomMonster,
-                "creatureTerrain": creatureTerrain,
-                "creatureDescription": creatureDescription,
-                "creatureBackground": creatureBackground,
-                "creatureSpecialAttacks": creatureSpecialAttacks,
-                "creatureSpecialDefenses": creatureSpecialDefenses              
-                                
-            };
-            alert(JSON.stringify(jsonArray));
-                     $.ajax({
-                        contentType: "application/json",
-        type: 'post',
-        url: 'http://localhost:8080/LARP/api/creature',
-        dataType: 'json',
-       
-    data: JSON.stringify(jsonArray),
-      // data: jsonArray,
-        success: function(response){
-      // alert(jsonArray);
-        alert('yes');
-          
-            $('#id1').html('yay!!!');
-          
-
-    },
-   error: function (xhr, ajaxOptions, thrownError) {
-        alert(xhr.status);
-        alert(thrownError);
-      //  alert(request.responsetext);
-        alert('FAIL');
-   }
-     });
- 
-     });
 });
             
      
@@ -117,16 +44,13 @@ and open the template in the editor.
         
         <div class ="Container">
             
-                <?php  $nameList = GetCreatureNames();
-                          
-                        //  print_r($nameList);
-                          ?>
+              
             <button class="button"  id="showAdd">Add Creature</button>
             <button class="button"  id="showEdit">Edit Creature</button>
             <button class="button"  id="showArcheType">Add/Edit Archetype</button>
             
             <div    class="addEdit" id="addCreauture">1
-                <form id='addForm' method ='post' name ='addForm'>
+                <form id='addForm' method ='post' name ='addForm' action="../PDO/SaveNewCreature.php">
                   
                          
             <div  class="addEdit" id="editCreature">
@@ -204,23 +128,21 @@ and open the template in the editor.
                       <textarea name='specialDefense' class='addEditTextarea' id='addspecialDefense'></textarea>
                   </div>
                     
-                      <Button id='submitAddNew'>Submit</button>
+                      <Button id='submitAddNew' type='submit' >Submit</button>
                 <button type="reset" value="Reset">Reset</button>W
                 </form>
                 
                 
-                <Button id='submitAddNew'>Submit</button>
-                <button type="reset" value="Reset">Reset</button>
+           
             </div>
        
             
             <div class="addEdit" id="addEditArchetype">
                 
                 <?php
-                
-                 $creature =                          GetCreatureByName("Gnoll");
-                
-                print_r($creature);
+               
+                $creatures = GetAllCreatures();
+                print_r($creatures);
       ?>
                 
                 <br>
