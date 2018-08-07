@@ -6,7 +6,7 @@
 	<title>Labels for Form Elements</title>
         <link rel="stylesheet" type="text/css" href="main.css">
         <script type="text/javascript" src="main.js"></script>
-	
+	    
 		<script>
 		function showHideShipInfo() {
                     if(document.getElementById('crName').checked) {
@@ -179,7 +179,7 @@
         
         var passVal = "";
         var creatueNameArr = Array();
-        
+        // This function populates creature names.
         function getCreatureNameJS(){
             var chx = document.getElementsByName('alternative1');
             
