@@ -166,8 +166,7 @@
             else {echo "0 result";}
             return  $arrQuery;
         }
-        
-
+       
       ?>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -182,7 +181,6 @@
         // This function populates creature names.
         function getCreatureNameJS(){
             var chx = document.getElementsByName('alternative1');
-            
             for(var indx=0;indx<chx.length;indx++)
             {
                 if(chx[indx].type==='radio'&& chx[indx].checked)
@@ -204,6 +202,27 @@
     });
   
         }
+</script>
+<script>
+    function populateAtribt(creatueNameArr){
+       var chx = document.getElementsByName('a1_CreNme');
+//        var chx = document.getElementsByName('CreatureName');
+//                if ($('input[name=a1_CreNme]:checked').length > 0) {
+//                    alert("ok");
+//                 }
+     
+            for(var ind=0;ind<creatueNameArr.length;ind++)
+            {
+
+             alert(creatueNameArr[ind]);
+                if(creatueNameArr[ind].checked)
+                {
+                    //CreNmepassVal= creatueNameArr[ind];
+                    alert(creatueNameArr[ind]);
+                    
+                }
+            }
+    }
 </script>
 <script>
         function recall(){
@@ -277,7 +296,7 @@
            for(var i = 0; i < creatueNameArr.length; i++)
             {
                 document.getElementById("creature_name_div").innerHTML=document.getElementById("creature_name_div").innerHTML+
-                "<br><input type='radio' id='a1_CreNme'  value='CreatureName' name='CreatureName'>"+creatueNameArr[i]+" ";
+                "<br><input type='radio' id='a1_CreNme'  value='' name='CreatureName' onclick='populateAtribt(creatueNameArr)'  >"+creatueNameArr[i]+" ";
 
             }
            }
