@@ -1,0 +1,71 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 6, 2018, 4:53:01 PM
+    Author     : Akshata
+*/
+
+		* {
+		margin: 0; padding:0; border: 0;}
+		
+		body { 
+			font-weight: bold; font-family: verdana; font-size: 100%; color: #333; 
+			padding: 20px;width: 800px}
+		
+		form {
+			width: 800px;background-color: #ABC; border-radius: 5px; padding: 10px;}
+		
+		fieldset {
+			border:  2px solid #333; border-radius: 10px; padding: 5px;
+			margin: 15px 0px;}
+			
+		legend {
+			color: #900;}
+			
+		input,textArea {
+			font-size: 120%; margin-left: 20px; width: 290px;
+			margin-bottom: 10px;
+			}
+                div.lsBtn{
+                       position: absolute;
+                        height: 30px;
+                        bottom: 630px;
+                        right: 70px;
+                        }
+                div.lsBx {
+                        position: absolute;
+                        width: 20%;
+                        right: 50px;
+                        bottom: 280px;
+                        border: 3px solid #8AC007;
+
+                        }
+                       div.prnBtn{
+                            position: absolute;
+                            right: 50px;
+                            bottom: 50px;
+                            border: 3px solid green;
+                            
+                            
+                        }
+
+			
+		fieldset label {
+			width: 160px; display: block; float: left; clear: left;
+			}
+			
+		input[type=submit] {
+			border: 3px outset #444; float: right;margin-left: 1500px; background-color: #FFC;
+                        width: 160px; display: block; float: left; clear: left;
+			}
+                input[type=radio] {
+			border: 50px;
+                         float: left; clear: left;
+			}
+			
+		input[type=checkbox] {
+			font-size: 110%; margin: 0px; width: 30px;
+			}
