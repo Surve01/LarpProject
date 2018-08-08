@@ -178,6 +178,8 @@
         
         var passVal = "";
         var creatueNameArr = Array();
+        var selectedCreatureName = "";
+        
         // This function populates creature names.
         function getCreatureNameJS(){
             var chx = document.getElementsByName('alternative1');
@@ -204,24 +206,28 @@
         }
 </script>
 <script>
-    function populateAtribt(creatueNameArr){
-       var chx = document.getElementsByName('a1_CreNme');
-//        var chx = document.getElementsByName('CreatureName');
-//                if ($('input[name=a1_CreNme]:checked').length > 0) {
-//                    alert("ok");
-//                 }
-     
-            for(var ind=0;ind<creatueNameArr.length;ind++)
+    function populateAtribt(){
+            var chx = document.getElementsByName('CreatureName');
+            for(var indx=0;indx<chx.length;indx++)
             {
-
-             alert(creatueNameArr[ind]);
-                if(creatueNameArr[ind].checked)
+                if(chx[indx].type==='radio'&& chx[indx].checked)
                 {
-                    //CreNmepassVal= creatueNameArr[ind];
-                    alert(creatueNameArr[ind]);
-                    
+                   selectedCreatureName= chx[indx].value;
+                   alert(selectedCreatureName);
+                   break;
+
                 }
             }
+            
+            $.post("queryValues.php",
+            {
+                passVal: passVal,
+                selectedCreatureName: selectedCreatureName
+            },
+            function(data, status){
+
+            });
+
     }
 </script>
 <script>
@@ -296,7 +302,7 @@
            for(var i = 0; i < creatueNameArr.length; i++)
             {
                 document.getElementById("creature_name_div").innerHTML=document.getElementById("creature_name_div").innerHTML+
-                "<br><input type='radio' id='a1_CreNme'  value='' name='CreatureName' onclick='populateAtribt(creatueNameArr)'  >"+creatueNameArr[i]+" ";
+                "<br><input type='radio' id='a1_CreNme'  value='"+creatueNameArr[i]+"' name='CreatureName' onclick='populateAtribt()'  >"+creatueNameArr[i]+" ";
 
             }
            }
@@ -378,14 +384,6 @@
                     var option;
                     var count = 0;
                     if ((x.options.length !== 0 )){
-                                     
-//                            option= document.createElement("option");  
-//                            option.text= chx[i].value;
-//                            x.add(option);
-////                            alert(x.options.length);   
-//                            recallList[x.options.length]=option.text;
-//                    }
-//                    else{
                         var len = x.options.length;
                         
                     for(var y=0; y<len;y++){

@@ -12,7 +12,7 @@
  * @author aejan
  */
 class ScenarioDetail {
-    private//put your code here 
+//    private//put your code here 
     
     
     public function expose() {
