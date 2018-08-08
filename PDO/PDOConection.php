@@ -15,7 +15,7 @@ function GetPDO(){
     
  $dsn ='mysql:host=localhost;dbname=larp_db';
 $username = 'root';
-$password = 'Password1';
+$password = '';
  
         try {
             return new PDO($dsn, $username, $password);
