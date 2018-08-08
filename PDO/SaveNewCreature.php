@@ -1,3 +1,4 @@
+
 <?php
 require 'PDOCOnection.php';
 /* 
@@ -74,4 +75,3 @@ function getNextCreatureID()
   {
 return "C".$str;
   }
-}

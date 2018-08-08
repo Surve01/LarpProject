@@ -4,88 +4,9 @@
 <head>
 	<meta charset="utf-8">
 	<title>Labels for Form Elements</title>
-	
-	<style>
-		* {
-		margin: 0; padding:0; border: 0;}
-		
-		body { 
-			font-weight: bold; font-family: verdana; font-size: 100%; color: #333; 
-			padding: 20px;width: 800px}
-		
-		form {
-			width: 800px;background-color: #ABC; border-radius: 5px; padding: 10px;}
-		
-		fieldset {
-			border:  2px solid #333; border-radius: 10px; padding: 5px;
-			margin: 15px 0px;}
-			
-		legend {
-			color: #900;}
-			
-		input,textArea {
-			font-size: 120%; margin-left: 20px; width: 290px;
-			margin-bottom: 10px;
-			}
-                div.lsBtn{
-                       position: absolute;
-                        height: 30px;
-                        bottom: 590px;
-                        right: 70px;
-/*                        border: 3px solid #8AC007;*/
-/*                            position: absolute;
-                              right: 150px;
-                              width: 200px;
-                              height: 120px;
-                        */
-/*                           position: relative;
-                            right: 150px;    
-                            width: 200px;
-                            height: 120px;*/
-                            
-                        }
-                div.lsBx {
-                        position: absolute;
-                        width: 25%;
-                        right: 50px;
-                        bottom: 280px;
-                        border: 3px solid #8AC007;
-/*                           position: absolute;
-                            right: 150px;    
-                            width: 50px;
-                            height: 120px;
-                            border: 3px solid green;*/
-
-                        }
-                       div.prnBtn{
-                            position: absolute;
-                            right: 50px;
-                            bottom: 50px;
-                            border: 3px solid green;
-                            
-                            
-                        }
-
-			
-		fieldset label {
-			width: 160px; display: block; float: left; clear: left;
-			}
-			
-		input[type=submit] {
-			border: 3px outset #444; float: right;margin-left: 1500px; background-color: #FFC;
-                        width: 160px; display: block; float: left; clear: left;
-			}
-                input[type=radio] {
-			border: 50px;
-                         float: left; clear: left;
-			}
-			
-		input[type=checkbox] {
-			font-size: 110%; margin: 0px; width: 30px;
-			}
-
-			
-		</style>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <script type="text/javascript" src="main.js"></script>
+	    
 		<script>
 		function showHideShipInfo() {
                     if(document.getElementById('crName').checked) {
@@ -112,106 +33,80 @@
 			} else {
                                 document.getElementById('shipinfo').style.display='none';
 				}
+                                
 		}
- 
-            
-            
-            
-        function selectFunction(wizForm){
-            //alert(wizForm.lstBx.options.length);
+
+    function selectFunction(wizForm){
             var selIndex=wizForm.lstBx.selectedIndex;
             var selName= wizForm.lstBx.options[selIndex].text;
-            //alert(selName);
-            ///var selOpt= document.getElementById("lstBx").options;
-           
+ 
            if (localStorage.getItem(selName))
            {
            var retObject= JSON.parse(localStorage.getItem(selName));
-           //alert (selName);
-           //var retObject= localStorage.getItem(selName);
-//            alert(retObject["hp"]);
-//            alert(retObject["alternative1"]);
-            
-            //document.getElementById('alternative1').checked=true;]
-            
+       
             var CTypeGrp = document.getElementsByName('alternative1');
             
             for (var i=0;i<CTypeGrp.length;i++){
-                //alert(cTypeGrp[i].value);
-                //alert(retObject['alternative1']);
-//                            if(cTypeGrp[i].value === retObject['alternative1']){
-                                
                                 CTypeGrp[i].checked = false;
-                                
-                            
-                //CTypeGrp[i].checked = false;
             }
-            alert(retObject['alternative1']);
+            
             CTypeGrp[retObject['alternative1']].checked = true;         
-            //alert(CTypeGrp[retObject["alternative1"]].checked);
-//                    CTypeGrp[retObject["alternative1"]].checked = true;
-//
+
                     var CNameGrp = document.getElementsByName('CreatureName');
-                    //alert(CNameGrp.value);
+                    
                     for (var i=0;i<CNameGrp.length;i++){
                         CNameGrp[i].checked = false;
                     }
                     CNameGrp[retObject["CreatureName"]].checked = true;
-//            document.getElementsByName('CreatureName')[retObject['a1_CreNme']].checked= true ;
+                    
             document.getElementsByName('hp')[0].value = retObject['hp'];
         }else{  
             document.getElementsByName('hp')[0].value = 15;
         }
-            
-//            for(key in tempObject)
-//            {
-//                document.getElementsByName(key)[0].value = retObject[key];
-//            }
-          //document.getElementsByName('hp')[0].value = 55;
-//           recall(retObject);
-//            for(key in tempObject)
-//            {
-//                document.getElementsByName(key).value = key;
-//            }
-           
-           
-        }
-        
-        function recall(retObject){
-//            document.getElementByID(key).value = retObject["ArmorType"];
-            for(key in tempObject)
-            {
-                document.getElementsByName(key).value = retObject[key];
+    }
+        function changeValue()
+        {
+             var chx = document.getElementsByName('CreatureName');
+             alert("Change value");
+            for (var i=0;i<chx.length;i++){
+            if(chx[i].type==='radio'){
+
+           document.getElementById("a1_CreNme").checked=true;
+
+            } 
             }
         }
-        
-        
-        
-                    
-    
-                function changeValue()
-                {
-                     var chx = document.getElementsByName('CreatureName');
-                    for (var i=0;i<chx.length;i++){
-                    if(chx[i].type==='radio'){
-                        
-                   document.getElementById("a1_CreNme").checked=true;
-//                   document.getElementById("a2_CreNme").style.display='none'
-//                   document.getElementById("a2_CreNme").text='none'
-//                   document.getElementById("a3_CreNme").style.display='none'
-//                   document.getElementById("a3_CreNme").value='none'
-                } 
-                }
-            }
 
             
             function delCreature(){
-            var x = document.getElementById("lstBx");
-            x.remove(x.selectedIndex);
+                 if (localStorage.getItem("showList"))
+           {
+                var retList= localStorage.getItem("showList");
+                var x= document.getElementById("lstBx");
+                var item_indx = x.options[x.selectedIndex].index + 1;
+//                alert(item_indx);
+                var splt= retList.split(",");
+//                alert("Start Delete: Length " + splt.length + "item_indx: " + item_indx);
+               for(var i=1;i<splt.length;i++)
+                {
+                  if(item_indx===i){
+//                     alert(splt[item_indx]); 
+                     splt.splice(i,1);
+                     
+//                     alert("Splt len: " + splt.length);
+                    break;
+                }
+            }
+            clrCreature();
+            localStorage.setItem("showList",splt);
+            recall();
         }
+    }
+            
             function clrCreature(){
             var x = document.getElementById("lstBx");
             x.innerHTML="";
+            localStorage.clear();
             }
             function prntCreature(){
                 var selInd= document.getElementById("lstBx").options.selectedIndex;
@@ -234,23 +129,144 @@
 		
 	
 </head>
-<body >
+<body onload="recall()">
+      <?php // include("Controllers/GetCreatureData.php"); 
+  $CreatureTypeLocal;    
+  
+  $link=mysqli_connect("localhost","root","");
+  mysqli_select_db($link, "larp_db");
+  
+      mysqli_select_db($link, "larp_db");
+    if (!mysqli_select_db($link, "larp_db")) {
+        echo "database not selected";
+      }
+    if($link == false){
+        die("Error:Could not connect.".mysqli_connect_error());
+    }
+    
+     function selectCreatureType(){
+        global $link;
+//        echo 'This is creature type';
+        $arrQuery = Array();
+        $sql= "SELECT DISTINCT CREATURE_TYPE FROM CREATURE;";
+        $result= mysqli_query($link,$sql);
+        $resultCheck = mysqli_num_rows($result);
+        if ($resultCheck>0) {
+            $i=0;
+            while($row= mysqli_fetch_assoc($result)){
+                global $i;
+                $arrQuery[$i] =($row["CREATURE_TYPE"]); 
+               $i+=1; 
+            }        
+//            foreach ($arrQuery as $query){
+//                echo $query;
+//            } 
+            }
+            
+            else {echo "0 result";}
+            return  $arrQuery;
+        }
+       
+      ?>
 
-<form name="wizForm" method="post" action="">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+
+</script>
+    <script type="text/javascript">
+        
+        var passVal = "";
+        var creatueNameArr = Array();
+        var selectedCreatureName = "";
+        
+        // This function populates creature names.
+        function getCreatureNameJS(){
+            var chx = document.getElementsByName('alternative1');
+            for(var indx=0;indx<chx.length;indx++)
+            {
+                if(chx[indx].type==='radio'&& chx[indx].checked)
+                {
+                   passVal= chx[indx].value.substring(chx[indx].value.lastIndexOf("=")+1);
+                   alert(passVal);
+//                    document.getElementById("hideCreName").value = passVal;
+//                   alert(document.getElementById("hideCreName").value);
+                }
+            }
+            
+    $.post("jQueryTrial.php",
+    {
+        passVal: passVal
+    },
+    function(data, status){
+         creatueNameArr = JSON.parse(data);
+         populateCreatureNames();
+    });
+  
+        }
+</script>
+<script>
+    function populateAtribt(){
+            var chx = document.getElementsByName('CreatureName');
+            for(var indx=0;indx<chx.length;indx++)
+            {
+                if(chx[indx].type==='radio'&& chx[indx].checked)
+                {
+                   selectedCreatureName= chx[indx].value;
+                   alert(selectedCreatureName);
+                   break;
+
+                }
+            }
+            
+            $.post("queryValues.php",
+            {
+                passVal: passVal,
+                selectedCreatureName: selectedCreatureName
+            },
+            function(data, status){
+
+            });
+
+    }
+</script>
+<script>
+        function recall(){
+
+        if (localStorage.getItem("showList"))
+       {
+            var retList= localStorage.getItem("showList");
+            var x= document.getElementById("lstBx");
+            var splt= retList.split(",");
+
+           for(var i=1;i<splt.length;i++)
+            {
+               option= document.createElement("option"); 
+               option.text=splt[i];
+            x.add(option);  
+            }
+        }
+   }
+    
+</script>
+<form action="index.php" name="wizForm" method="post" >
+    <input type="hidden" name="hideCreName" id="hideCreName" value="">
     
         <input type="checkbox" id="crType" name="CreatureType" value="yes"
        onclick="showHideShipInfo()">
 <label for="CreatureType">Click to see Creature Type</label>
         <fieldset style="display:none" id="creinfo">
 	<legend>Creature Type</legend>
-        <input  type="radio" id="CreTpe1" name="alternative1" value="Humanoid" onclick="changeValue()">Humanoid<br>
-        <input  type="radio" id="CreTpe2" name="alternative1" value="Demon">Demon<br>
-        <input  type="radio" id="CreTpe3"  name="alternative1" value="Animal">Animal<br>
-<!--	 <input type="submit" value="Humanoid"><br>
-	 <input type="submit" value="Demon" name="lname"><br>
-         <input type="submit"  value="Animal" id="add1" name="address"><br>-->
+        <?php
+             $arrCreData= selectCreatureType();
+             foreach ($arrCreData as $var){ 
+                 ?>
         
-</fieldset>
+        <input  type="radio" id="CreTpe1" name="alternative1" value="=<?php echo $var ?>" onclick="getCreatureNameJS()"><?php echo $var ?><br>
+        
+             <?php } ?>
+        
+        </fieldset>
 
 
 <div  class="lsBtn" style="width:310px"  >    
@@ -277,13 +293,21 @@
 <label for="CreChkBx">Click to see Creature Name</label>
         <fieldset style="display:none" id="creNmeinfo">
 	<legend>Creature Name</legend>
-        <input  type="radio" id="a1_CreNme" name="CreatureName"  value="Orc">Orc <br>
-        <input  type="radio" id="a2_CreNme" name="CreatureName"  value="Hobgoblin">Hobgoblin<br>
-        <input  type="radio" id="a3_CreNme" name="CreatureName"  value="Goblin">Goblin<br>
-<!--        <input type = "button" id = "alternative1" value="Orc" onClick="changeQuestion('alternative1')">
-	 <input type = "button" id = "alternative2" value="Hobgoblin" onClick="changeQuestion('alternative2')">
-         <input type = "button" id = "alternative3" value="Goblin" onClick="changeQuestion('alternative3')">-->
-  
+        <div id="creature_name_div"></div>
+
+       <script>
+       function populateCreatureNames(){
+           alert(creatueNameArr.length + " creature Names");
+           document.getElementById("creature_name_div").innerHTML="";
+           for(var i = 0; i < creatueNameArr.length; i++)
+            {
+                document.getElementById("creature_name_div").innerHTML=document.getElementById("creature_name_div").innerHTML+
+                "<br><input type='radio' id='a1_CreNme'  value='"+creatueNameArr[i]+"' name='CreatureName' onclick='populateAtribt()'  >"+creatueNameArr[i]+" ";
+
+            }
+           }
+ 
+       </script>     
 </fieldset>
     <br>
 <br> 
@@ -328,7 +352,7 @@
         <input type="text" id="cNote" name="cNote"><br>
         <label for="scen">Scenario notes </label> 
         <textarea rows="10" cols="40" id="scen" name="scen"></textarea><br>
-        <label id="Test123">test</label>
+        
 </fieldset>
 <br>
 
@@ -341,6 +365,8 @@
                 'aType':'','aWorn':'','wType':'','dmg':'',
                 'descr':'','bckg':'','roleP':'','spAtck':''
                 ,'spDef':'','cNote':'','scen':''};
+                var recallList=[];
+                
 		function funcAdd(){
                     var temp;
                     var chx = document.getElementsByName('CreatureName');
@@ -348,52 +374,48 @@
                     
                     var indx=0;
                     for(;indx<chx2.length;indx++){
-                        if(chx[indx].type==='radio' && chx[indx].checked){
-                            
-                        
+                        if(chx2[indx].type==='radio'&& chx2[indx].checked){
+                              
                     for (var i=0;i<chx.length;i++){
+                    
                     if(chx[i].type==='radio' && chx[i].checked){   
                     
                     var x= document.getElementById("lstBx");
                     var option;
-                    if ((x.options.length === 0 )){
-                                     
-                            option= document.createElement("option");  
-                            option.text= chx[i].value;
-                            x.add(option);
-                    }
-                    else{
+                    var count = 0;
+                    if ((x.options.length !== 0 )){
                         var len = x.options.length;
-                        var count = 0;
+                        
                     for(var y=0; y<len;y++){
-//                            for(var z=0;z<=y;z++){
-                                if(x.options[y].text.match(chx[i].value)){
+                        if(x.options[y].text.match(chx[i].value)){
+                            if (x.options[y].text.lastIndexOf("_") < 0)
+                            {
+                                count = 0;
+                            }
+                            else
+                            {
+                                count = parseInt(x.options[y].text.substring(x.options[y].text.lastIndexOf("_") + 1),10) + 1;
+                            }
 
-                                    count++;
-                                    
-                                }
+                        }
                     }
-                    var option= document.createElement("option"); 
- 
-                    if (count > 0){
-                        option.text= chx[i].value + '_'+ count ;
-                    }else{
-                        option.text= chx[i].value;
-                    }
-                    
-                    x.add(option);
                 }
+                    var option= document.createElement("option"); 
+                    
+                    option.text= chx[i].value + '_'+ count;
+                    x.add(option);
+                    recallList[x.options.length]=option.text;
+
+//                }
+
                 var listText =option.text;
-                var indxText=chx2[indx].value;
-//               
-//                alert(indxText);
+                var indxText=chx2[indx].value;             
+
              tempObject['CreatureName']=i;
-             
-            // alert(tempObject['a1_CreNme']);
+  
+  
              tempObject['alternative1']=indx;
-            //tempObject['alternative1']=document.getElementsByName('alternative1').value;
-          // alert(tempObject['alternative1']);
-            //tempObject['a1_CreNme']=document.getElementsByName('a1_CreNme').value;
+             
             tempObject['lvl']=document.getElementsByName('lvl')[0].value;
             tempObject['hp']=document.getElementsByName('hp')[0].value;
             tempObject['aType']=document.getElementsByName('aType')[0].value;
@@ -407,17 +429,24 @@
             tempObject['spDef']=document.getElementsByName('spDef')[0].value;
             tempObject['cNote']=document.getElementsByName('cNote')[0].value;
             tempObject['scen']=document.getElementsByName('scen')[0].value;
-           alert("Monster");
+           
             
             localStorage.setItem(listText,JSON.stringify(tempObject));
-                break;
+            
+            localStorage.setItem("showList",recallList);
+            
+             break;   
             }
                 
-            }
-                        }
-   
-                    }  
+                    }
+                        
+                    
+                    }
+  
+                 }  
+                    
         }
+
 
 </script>
 </body>

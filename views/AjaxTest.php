@@ -1,3 +1,4 @@
+
 <?php
  include "../Controllers/GetCreatureData.php";
 /* 
@@ -7,4 +8,3 @@
  */
 
 print_r(GetCreatureTypes());
-
