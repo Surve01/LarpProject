@@ -35,7 +35,7 @@ and open the template in the editor.
             
                       </select>
         
-             
+                <input type="hidden" id="creautreID" value=""><
             </div>
                     
                     <div id='addEditPair' class='LabeFieldPair'> 

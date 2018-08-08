@@ -17,39 +17,39 @@ $(document).ready(function () {
     $("#showEdit").click(function () {
         //   $("#addCreauture").hide();
         $("#editCreature").toggle();
-          $.ajax({
+        $.ajax({
             contentType: "application/json",
             type: 'get',
             url: '../PDO/GetCreatureNames.php',
-             dataType: 'json',
+            dataType: 'json',
 
-       //     data: JSON.stringify(jsonArray),
-        
+            //     data: JSON.stringify(jsonArray),
+
             success: function (response) {
-            
-             // alert(JSON.stringify(response));
-              $editSelect = $("select[id='creatureNameDropDown']");
-            var len = response.length;
-            
-            for( var i = 0; i<len; i++){
-                var name = response[i].CREATURE_NAME;
-                
-             $editSelect.append("<option value='"+name+"'>"+name+"</option>");
 
-            }
-              
+                // alert(JSON.stringify(response));
+                $editSelect = $("select[id='creatureNameDropDown']");
+                var len = response.length;
+                $editSelect.append("<option>Choose One</option>");
+                for (var i = 0; i < len; i++) {
+                    var name = response[i].CREATURE_NAME;
+                    var id = response[i].CREATURE_ID;
+                    $editSelect.append("<option value='" + id + "'>" + name + "</option>");
+
+                }
+
             },
             error: function (xhr, ajaxOptions, thrownError) {
                 alert(xhr.status);
                 alert(thrownError);
-               // alert(request.responsetext);
+                // alert(request.responsetext);
                 alert('FAIL');
             }
         });
 
         return false;
-        
-        
+
+
         // $("#addEditArchetype").hide();
     });
     $("#showArcheType").click(function () {
@@ -84,7 +84,7 @@ $(document).ready(function () {
             "creatureSpecialDefenses": creatureSpecialDefenses
         };
 
-   //     alert(JSON.stringify(jsonArray));
+        //     alert(JSON.stringify(jsonArray));
         $.ajax({
             contentType: "application/json",
             type: 'post',
@@ -92,16 +92,16 @@ $(document).ready(function () {
             // dataType: 'json',
 
             data: JSON.stringify(jsonArray),
-        
+
             success: function (response) {
-            
+
                 alert('Creature Saved');
                 $('#addForm').trigger('reset');
             },
             error: function (xhr, ajaxOptions, thrownError) {
                 alert(xhr.status);
                 alert(thrownError);
-               // alert(request.responsetext);
+                // alert(request.responsetext);
                 alert('FAIL');
             }
         });
@@ -109,7 +109,35 @@ $(document).ready(function () {
         return false;
 
     });
+
+$("select[id='creatureNameDropDown']").change(function(){
+    alert("changed");
+    var id = $('#creatureNameDropDown').find(":selected").val();
     
+   
     
-    
+    var jsonArray = {
+            "id": id};
+    $.ajax({
+            contentType: "application/json",
+            type: 'post',
+            url: '../PDO/GetCreature.php',
+             dataType: 'json',
+
+            data: JSON.stringify(jsonArray),
+
+            success: function (response) {
+
+                alert(JSON.stringify(response));
+                $('#addForm').trigger('reset');
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                alert(xhr.status);
+                alert(thrownError);
+                // alert(request.responsetext);
+                alert('FAIL');
+            }
+        });
+});
+
 });
