@@ -30,19 +30,8 @@ and open the template in the editor.
                          
             <div  class="addEdit" id="editCreature">
            
-                    <select  onselect=""name ="creatureNameSelection" class="creatureInput" id="creatureNameDropDown">
-                          <option selected="selected">Choose one</option>
-                          <?php
-                          foreach($nameList as $name)
-                          {
-                              ?>
-                          <option value="<?php echo $name; ?>"><?php echo $name; ?></option>
-                                  <?php
-                          }
-                          
-                          ?>
-                          
-                          ?>
+                    <select   name ="creatureNameSelection" class="creatureInput" id="creatureNameDropDown">
+                     
             
                       </select>
         
