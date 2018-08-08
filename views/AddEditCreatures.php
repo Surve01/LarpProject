@@ -11,33 +11,7 @@ and open the template in the editor.
         include "../PDO/PDOConection.php"?>
         <title>Add/Edit Creatures</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script type="text/javascript">
-            $(document).ready(function(){
-              $('#editCreature').hide();
-        $("#addEditArchetype").hide();
-            
-    $("#showAdd").click(function(){
-        $("#addCreauture").show();
-     $("#editCreature").hide();
-       $("#addEditArchetype").hide();
-    });
-    $("#showEdit").click(function(){
-     //   $("#addCreauture").hide();
-        $("#editCreature").toggle();
-       // $("#addEditArchetype").hide();
-    });
-     $("#showArcheType").click(function(){
-       $("#addCreauture").hide();
-        $("#editCreature").hide();
-        $("#addEditArchetype").show();
-    });
-    
-    
-});
-            
-     
-            
-         </script>
+        <script src="../js/SaveEditCreature.js"></script>
     </head>
     <body>
         
@@ -128,7 +102,7 @@ and open the template in the editor.
                       <textarea name='specialDefense' class='addEditTextarea' id='addspecialDefense'></textarea>
                   </div>
                     
-                      <Button id='submitAddNew' type='submit' >Submit</button>
+                      <Button id='submitAddNew' >Submit</button>
                 <button type="reset" value="Reset">Reset</button>W
                 </form>
                 
