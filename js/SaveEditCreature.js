@@ -7,12 +7,15 @@
 
 $(document).ready(function () {
     var action = 'add';
+    var url;
+     var successStr;
+     
     $('#editCreature').hide();
     $("#addEditArchetype").hide();
 
     $("#showAdd").click(function () {
         action = 'add';
-      $('#addForm').trigger('reset');
+        $('#addForm').trigger('reset');
         $("#addCreauture").show();
         $("#editCreature").hide();
         $("#addEditArchetype").hide();
@@ -75,6 +78,7 @@ $(document).ready(function () {
         var creatureBackground = $('#addbackground').val();
         var creatureSpecialAttacks = $('#addSpecialAttacks').val();
         var creatureSpecialDefenses = $('#addspecialDefense').val();
+        var creatureID = $('#creatureID').val();
 
         var jsonArray = {
             "creatureName": creatureName,
@@ -86,21 +90,30 @@ $(document).ready(function () {
             "creatureDescription": creatureDescription,
             "creatureBackground": creatureBackground,
             "creatureSpecialAttacks": creatureSpecialAttacks,
-            "creatureSpecialDefenses": creatureSpecialDefenses
+            "creatureSpecialDefenses": creatureSpecialDefenses,
+            "creatureID": creatureID
         };
-
-        //     alert(JSON.stringify(jsonArray));
+        if (!creatureID)
+        {
+            url = '../PDO/SaveNewCreature.php';
+            successStr = 'Creature Saved';
+        } else
+        {
+            url = '../PDO/EditCreature.php';
+            successStr = 'Creature Edited';
+        }
+       alert(JSON.stringify(jsonArray));
         $.ajax({
             contentType: "application/json",
             type: 'post',
-            url: '../PDO/SaveNewCreature.php',
+            url: url,
             // dataType: 'json',
 
             data: JSON.stringify(jsonArray),
 
             success: function (response) {
-
-                alert('Creature Saved');
+alert(response);
+                alert(successStr);
                 $('#addForm').trigger('reset');
             },
             error: function (xhr, ajaxOptions, thrownError) {
@@ -137,14 +150,14 @@ $(document).ready(function () {
                 data: JSON.stringify(jsonArray),
 
                 success: function (response) {
-                    var randomMonster =response.CREATURE_RANDOM_MONSTER;
-                    randomMonster= randomMonster.toLowerCase();
+                    var randomMonster = response.CREATURE_RANDOM_MONSTER;
+                    randomMonster = randomMonster.toLowerCase();
                     alert(JSON.stringify(response));
                     $('#addName').val(response.CREATURE_NAME);
                     $('#addType').val(response.CREATURE_TYPE);
                     $('#addMonsterBook').val(response.CREATURE_MONSTER_BOOK);
                     $('#addFrequency').val(response.CREATURE_FREQUENCY);
-                    $('input[name=randomMonster][value="'+randomMonster+'"]').prop('checked',true);
+                    $('input[name=randomMonster][value="' + randomMonster + '"]').prop('checked', true);
                     $('#addTerrain').val(response.CREATURE_TERRAIN);
                     $('#addDescription').val(response.CREATURE_DESCRIPTION);
                     $('#addbackground').val(response.CREATURE_BACKGROUND);

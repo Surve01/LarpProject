@@ -18,7 +18,7 @@ if(sizeof($dataArray) == 1 )
 }
 else
 {
-    echo "{'fuck: this'}";
+    
 }
 
 //print_r($dataArray);
