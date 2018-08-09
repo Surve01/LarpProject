@@ -6,16 +6,20 @@
 
 
 $(document).ready(function () {
+    var action = 'add';
     $('#editCreature').hide();
     $("#addEditArchetype").hide();
 
     $("#showAdd").click(function () {
+        action = 'add';
+      $('#addForm').trigger('reset');
         $("#addCreauture").show();
         $("#editCreature").hide();
         $("#addEditArchetype").hide();
     });
     $("#showEdit").click(function () {
-        //   $("#addCreauture").hide();
+        $('#addForm').trigger('reset');//   $("#addCreauture").hide();
+        action = 'edit';
         $("#editCreature").toggle();
         $.ajax({
             contentType: "application/json",
@@ -30,7 +34,8 @@ $(document).ready(function () {
                 // alert(JSON.stringify(response));
                 $editSelect = $("select[id='creatureNameDropDown']");
                 var len = response.length;
-                $editSelect.append("<option>Choose One</option>");
+                $editSelect.empty()
+                        .append("<option value='choose'>Choose One</option>");
                 for (var i = 0; i < len; i++) {
                     var name = response[i].CREATURE_NAME;
                     var id = response[i].CREATURE_ID;
@@ -110,34 +115,51 @@ $(document).ready(function () {
 
     });
 
-$("select[id='creatureNameDropDown']").change(function(){
-    alert("changed");
-    var id = $('#creatureNameDropDown').find(":selected").val();
-    
-   
-    
-    var jsonArray = {
-            "id": id};
-    $.ajax({
-            contentType: "application/json",
-            type: 'post',
-            url: '../PDO/GetCreature.php',
-             dataType: 'json',
+    $("select[id='creatureNameDropDown']").change(function () {
 
-            data: JSON.stringify(jsonArray),
+        var id = $('#creatureNameDropDown').find(":selected").val();
+        if (id === 'choose')
+        {
+            $('#addForm').trigger('reset');
+            return false;
+        } else
+        {
 
-            success: function (response) {
 
-                alert(JSON.stringify(response));
-                $('#addForm').trigger('reset');
-            },
-            error: function (xhr, ajaxOptions, thrownError) {
-                alert(xhr.status);
-                alert(thrownError);
-                // alert(request.responsetext);
-                alert('FAIL');
-            }
-        });
-});
+            var jsonArray = {"id": id};
+            alert(jsonArray);
+            $.ajax({
+                contentType: "application/json",
+                type: 'post',
+                url: '../PDO/GetCreature.php',
+                dataType: 'json',
+
+                data: JSON.stringify(jsonArray),
+
+                success: function (response) {
+                    var randomMonster =response.CREATURE_RANDOM_MONSTER;
+                    randomMonster= randomMonster.toLowerCase();
+                    alert(JSON.stringify(response));
+                    $('#addName').val(response.CREATURE_NAME);
+                    $('#addType').val(response.CREATURE_TYPE);
+                    $('#addMonsterBook').val(response.CREATURE_MONSTER_BOOK);
+                    $('#addFrequency').val(response.CREATURE_FREQUENCY);
+                    $('input[name=randomMonster][value="'+randomMonster+'"]').prop('checked',true);
+                    $('#addTerrain').val(response.CREATURE_TERRAIN);
+                    $('#addDescription').val(response.CREATURE_DESCRIPTION);
+                    $('#addbackground').val(response.CREATURE_BACKGROUND);
+                    $('#addSpecialAttacks').val(response.CREATURE_SPECIAL_ATTACKS);
+                    $('#addspecialDefense').val(response.CREATURE_SPECIAL_DEFENSES);
+                    $('#creatureID').val(response.CREATURE_ID);
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    alert(xhr.status);
+                    alert(thrownError);
+                    // alert(request.responsetext);
+                    alert('FAIL');
+                }
+            });
+        }
+    });
 
 });
