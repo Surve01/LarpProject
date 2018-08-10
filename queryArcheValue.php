@@ -4,7 +4,6 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
- * created by asurve
  */
 //    $row = Array();
     $creature_id = "";
@@ -15,22 +14,22 @@
     mysqli_select_db($link, "larp_db");          
 
     // Values from creature table for 
-    $sql= "Select * from CREATURE where CREATURE_TYPE = '".$creature_type."' AND CREATURE_NAME = '".$creature_name."'";
-    $creature_data= mysqli_query($link,$sql);
-    
-//    echo("Creature Type: ".$creature_type."Creature Name: ".$creature_name."\n");
-    
-    if (mysqli_num_rows($creature_data) > 0) {
-        
-        while($row= mysqli_fetch_assoc($creature_data)){
-            $creature_id = $row["CREATURE_ID"];
-            echo (json_encode($row));
-            
-        }
-        
-
-        }
-    else {echo "0 result for creature type & creature name";}
+//    $sql= "Select * from CREATURE where CREATURE_TYPE = '".$creature_type."' AND CREATURE_NAME = '".$creature_name."'";
+//    $creature_data= mysqli_query($link,$sql);
+//    
+////    echo("Creature Type: ".$creature_type."Creature Name: ".$creature_name."\n");
+//    
+//    if (mysqli_num_rows($creature_data) > 0) {
+//        
+//        while($row= mysqli_fetch_assoc($creature_data)){
+//            $creature_id = $row["CREATURE_ID"];
+//            echo (json_encode($row));
+//            
+//        }
+//        
+//
+//        }
+//    else {echo "0 result for creature type & creature name";}
    
     
     // Archetypes from Archetype table.
