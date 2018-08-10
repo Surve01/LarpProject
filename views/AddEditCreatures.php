@@ -22,9 +22,9 @@ and open the template in the editor.
               
             <button class="button"  id="showAdd">Add Creature</button>
             <button class="button"  id="showEdit">Edit Creature</button>
-            <button class="button"  id="showArcheType">Add/Edit Archetype</button>
+         
             
-            <div    class="addEdit" id="addCreauture">1
+            <div    class="addEdit" id="addCreauture">
                 <form id='addForm' method ='post' name ='addForm' action="../PDO/SaveNewCreature.php">
                   
                          
@@ -103,32 +103,16 @@ and open the template in the editor.
             
             <div class="addEdit" id="addEditArchetype">
                 
-                <?php
                
-                $creatures = GetAllCreatures();
-                print_r($creatures);
-      ?>
-                
                 <br>
                 <br>
                 
-                <?php
-          //      $archetypes = GetCreatureArchetypes($creature[0]['creatureId']);
-                
-            //    echo
-            //    Print_r($archetypes)
-                ?>
-                3</div>
+              
+                </div>
              
              
         </div>
         
-        <button id='prev' > im a button</button>
-        
-        <p id ='id1'>THIS IS THE ID
-        </p>
-        <?php
-        // put your code here
-        ?>
+       
     </body>
 </html>

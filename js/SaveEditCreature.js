@@ -102,7 +102,7 @@ $(document).ready(function () {
             url = '../PDO/EditCreature.php';
             successStr = 'Creature Edited';
         }
-       alert(JSON.stringify(jsonArray));
+     //  alert(JSON.stringify(jsonArray));
         $.ajax({
             contentType: "application/json",
             type: 'post',
@@ -112,7 +112,7 @@ $(document).ready(function () {
             data: JSON.stringify(jsonArray),
 
             success: function (response) {
-alert(response);
+
                 alert(successStr);
                 $('#addForm').trigger('reset');
             },
@@ -140,7 +140,7 @@ alert(response);
 
 
             var jsonArray = {"id": id};
-            alert(jsonArray);
+           // alert(jsonArray);
             $.ajax({
                 contentType: "application/json",
                 type: 'post',
@@ -152,7 +152,7 @@ alert(response);
                 success: function (response) {
                     var randomMonster = response.CREATURE_RANDOM_MONSTER;
                     randomMonster = randomMonster.toLowerCase();
-                    alert(JSON.stringify(response));
+                 //   alert(JSON.stringify(response));
                     $('#addName').val(response.CREATURE_NAME);
                     $('#addType').val(response.CREATURE_TYPE);
                     $('#addMonsterBook').val(response.CREATURE_MONSTER_BOOK);
