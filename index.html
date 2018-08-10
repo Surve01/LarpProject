@@ -1,426 +1,424 @@
 
 <!DOCTYPE html>
 <html lang="en-US">
-<head>
-	<meta charset="utf-8">
-	<title>Labels for Form Elements</title>
-	
-	<style>
-		* {
-		margin: 0; padding:0; border: 0;}
-		
-		body { 
-			font-weight: bold; font-family: verdana; font-size: 100%; color: #333; 
-			padding: 20px;width: 800px}
-		
-		form {
-			width: 800px;background-color: #ABC; border-radius: 5px; padding: 10px;}
-		
-		fieldset {
-			border:  2px solid #333; border-radius: 10px; padding: 5px;
-			margin: 15px 0px;}
-			
-		legend {
-			color: #900;}
-			
-		input,textArea {
-			font-size: 120%; margin-left: 20px; width: 290px;
-			margin-bottom: 10px;
-			}
-                div.lsBtn{
-                       position: absolute;
-                        height: 30px;
-                        bottom: 590px;
-                        right: 70px;
-/*                        border: 3px solid #8AC007;*/
-/*                            position: absolute;
-                              right: 150px;
-                              width: 200px;
-                              height: 120px;
-                        */
-/*                           position: relative;
-                            right: 150px;    
-                            width: 200px;
-                            height: 120px;*/
-                            
-                        }
-                div.lsBx {
-                        position: absolute;
-                        width: 25%;
-                        right: 50px;
-                        bottom: 280px;
-                        border: 3px solid #8AC007;
-/*                           position: absolute;
-                            right: 150px;    
-                            width: 50px;
-                            height: 120px;
-                            border: 3px solid green;*/
+    <head>
+        <meta charset="utf-8">
+        <title>Labels for Form Elements</title>
 
-                        }
-                       div.prnBtn{
-                            position: absolute;
-                            right: 50px;
-                            bottom: 50px;
-                            border: 3px solid green;
-                            
-                            
-                        }
+        <style>
+            * {
+                margin: 0; padding:0; border: 0;}
 
-			
-		fieldset label {
-			width: 160px; display: block; float: left; clear: left;
-			}
-			
-		input[type=submit] {
-			border: 3px outset #444; float: right;margin-left: 1500px; background-color: #FFC;
-                        width: 160px; display: block; float: left; clear: left;
-			}
-                input[type=radio] {
-			border: 50px;
-                         float: left; clear: left;
-			}
-			
-		input[type=checkbox] {
-			font-size: 110%; margin: 0px; width: 30px;
-			}
+            body { 
+                font-weight: bold; font-family: verdana; font-size: 100%; color: #333; 
+                padding: 20px;width: 800px}
 
-			
-		</style>
-		<script>
-		function showHideShipInfo() {
-                    if(document.getElementById('crName').checked) {
-				document.getElementById('creNmeinfo').style.display='block';
-                                
-			} else {
-                                document.getElementById('creNmeinfo').style.display='none';
-				}
-                    if(document.getElementById('crType').checked) {
-				document.getElementById('creinfo').style.display='block';
-                                
-			} else {
-                                document.getElementById('creinfo').style.display='none';
-				}
-                    if(document.getElementById('attr').checked) {
-				document.getElementById('billinfo').style.display='block';
-                                
-			} else {
-                                document.getElementById('billinfo').style.display='none';
-				}
-			if(document.getElementById('shipsame').checked) {
-				document.getElementById('shipinfo').style.display='block';
-                                
-			} else {
-                                document.getElementById('shipinfo').style.display='none';
-				}
-		}
- 
-            
-            
-            
-        function selectFunction(wizForm){
-            //alert(wizForm.lstBx.options.length);
-            var selIndex=wizForm.lstBx.selectedIndex;
-            var selName= wizForm.lstBx.options[selIndex].text;
-            //alert(selName);
-            ///var selOpt= document.getElementById("lstBx").options;
-           
-           if (localStorage.getItem(selName))
-           {
-           var retObject= JSON.parse(localStorage.getItem(selName));
-           //alert (selName);
-           //var retObject= localStorage.getItem(selName);
+            form {
+                width: 800px;background-color: #ABC; border-radius: 5px; padding: 10px;}
+
+            fieldset {
+                border:  2px solid #333; border-radius: 10px; padding: 5px;
+                margin: 15px 0px;}
+
+            legend {
+                color: #900;}
+
+            input,textArea {
+                font-size: 120%; margin-left: 20px; width: 290px;
+                margin-bottom: 10px;
+            }
+            div.lsBtn{
+                position: absolute;
+                height: 30px;
+                bottom: 590px;
+                right: 70px;
+                /*                        border: 3px solid #8AC007;*/
+                /*                            position: absolute;
+                                              right: 150px;
+                                              width: 200px;
+                                              height: 120px;
+                */
+                /*                           position: relative;
+                                            right: 150px;    
+                                            width: 200px;
+                                            height: 120px;*/
+
+            }
+            div.lsBx {
+                position: absolute;
+                width: 25%;
+                right: 50px;
+                bottom: 280px;
+                border: 3px solid #8AC007;
+                /*                           position: absolute;
+                                            right: 150px;    
+                                            width: 50px;
+                                            height: 120px;
+                                            border: 3px solid green;*/
+
+            }
+            div.prnBtn{
+                position: absolute;
+                right: 50px;
+                bottom: 50px;
+                border: 3px solid green;
+
+
+            }
+
+
+            fieldset label {
+                width: 160px; display: block; float: left; clear: left;
+            }
+
+            input[type=submit] {
+                border: 3px outset #444; float: right;margin-left: 1500px; background-color: #FFC;
+                width: 160px; display: block; float: left; clear: left;
+            }
+            input[type=radio] {
+                border: 50px;
+                float: left; clear: left;
+            }
+
+            input[type=checkbox] {
+                font-size: 110%; margin: 0px; width: 30px;
+            }
+
+
+        </style>
+        <script>
+            function showHideShipInfo() {
+                if (document.getElementById('crName').checked) {
+                    document.getElementById('creNmeinfo').style.display = 'block';
+
+                } else {
+                    document.getElementById('creNmeinfo').style.display = 'none';
+                }
+                if (document.getElementById('crType').checked) {
+                    document.getElementById('creinfo').style.display = 'block';
+
+                } else {
+                    document.getElementById('creinfo').style.display = 'none';
+                }
+                if (document.getElementById('attr').checked) {
+                    document.getElementById('billinfo').style.display = 'block';
+
+                } else {
+                    document.getElementById('billinfo').style.display = 'none';
+                }
+                if (document.getElementById('shipsame').checked) {
+                    document.getElementById('shipinfo').style.display = 'block';
+
+                } else {
+                    document.getElementById('shipinfo').style.display = 'none';
+                }
+            }
+
+
+
+
+            function selectFunction(wizForm) {
+                //alert(wizForm.lstBx.options.length);
+                var selIndex = wizForm.lstBx.selectedIndex;
+                var selName = wizForm.lstBx.options[selIndex].text;
+                //alert(selName);
+                ///var selOpt= document.getElementById("lstBx").options;
+
+                if (localStorage.getItem(selName))
+                {
+                    var retObject = JSON.parse(localStorage.getItem(selName));
+                    //alert (selName);
+                    //var retObject= localStorage.getItem(selName);
 //            alert(retObject["hp"]);
 //            alert(retObject["alternative1"]);
-            
-            //document.getElementById('alternative1').checked=true;]
-            
-            var CTypeGrp = document.getElementsByName('alternative1');
-            
-            for (var i=0;i<CTypeGrp.length;i++){
-                //alert(cTypeGrp[i].value);
-                //alert(retObject['alternative1']);
+
+                    //document.getElementById('alternative1').checked=true;]
+
+                    var CTypeGrp = document.getElementsByName('alternative1');
+
+                    for (var i = 0; i < CTypeGrp.length; i++) {
+                        //alert(cTypeGrp[i].value);
+                        //alert(retObject['alternative1']);
 //                            if(cTypeGrp[i].value === retObject['alternative1']){
-                                
-                                CTypeGrp[i].checked = false;
-                                
-                            
-                //CTypeGrp[i].checked = false;
-            }
-            alert(retObject['alternative1']);
-            CTypeGrp[retObject['alternative1']].checked = true;         
-            //alert(CTypeGrp[retObject["alternative1"]].checked);
+
+                        CTypeGrp[i].checked = false;
+
+
+                        //CTypeGrp[i].checked = false;
+                    }
+                    alert(retObject['alternative1']);
+                    CTypeGrp[retObject['alternative1']].checked = true;
+                    //alert(CTypeGrp[retObject["alternative1"]].checked);
 //                    CTypeGrp[retObject["alternative1"]].checked = true;
 //
                     var CNameGrp = document.getElementsByName('CreatureName');
                     //alert(CNameGrp.value);
-                    for (var i=0;i<CNameGrp.length;i++){
+                    for (var i = 0; i < CNameGrp.length; i++) {
                         CNameGrp[i].checked = false;
                     }
                     CNameGrp[retObject["CreatureName"]].checked = true;
 //            document.getElementsByName('CreatureName')[retObject['a1_CreNme']].checked= true ;
-            document.getElementsByName('hp')[0].value = retObject['hp'];
-        }else{  
-            document.getElementsByName('hp')[0].value = 15;
-        }
-            
+                    document.getElementsByName('hp')[0].value = retObject['hp'];
+                } else {
+                    document.getElementsByName('hp')[0].value = 15;
+                }
+
 //            for(key in tempObject)
 //            {
 //                document.getElementsByName(key)[0].value = retObject[key];
 //            }
-          //document.getElementsByName('hp')[0].value = 55;
+                //document.getElementsByName('hp')[0].value = 55;
 //           recall(retObject);
 //            for(key in tempObject)
 //            {
 //                document.getElementsByName(key).value = key;
 //            }
-           
-           
-        }
-        
-        function recall(retObject){
-//            document.getElementByID(key).value = retObject["ArmorType"];
-            for(key in tempObject)
-            {
-                document.getElementsByName(key).value = retObject[key];
+
+
             }
-        }
-        
-        
-        
-                    
-    
-                function changeValue()
+
+            function recall(retObject) {
+//            document.getElementByID(key).value = retObject["ArmorType"];
+                for (key in tempObject)
                 {
-                     var chx = document.getElementsByName('CreatureName');
-                    for (var i=0;i<chx.length;i++){
-                    if(chx[i].type==='radio'){
-                        
-                   document.getElementById("a1_CreNme").checked=true;
+                    document.getElementsByName(key).value = retObject[key];
+                }
+            }
+
+
+
+
+
+            function changeValue()
+            {
+                var chx = document.getElementsByName('CreatureName');
+                for (var i = 0; i < chx.length; i++) {
+                    if (chx[i].type === 'radio') {
+
+                        document.getElementById("a1_CreNme").checked = true;
 //                   document.getElementById("a2_CreNme").style.display='none'
 //                   document.getElementById("a2_CreNme").text='none'
 //                   document.getElementById("a3_CreNme").style.display='none'
 //                   document.getElementById("a3_CreNme").value='none'
-                } 
+                    }
                 }
             }
 
-            
-            function delCreature(){
-            var x = document.getElementById("lstBx");
-            x.remove(x.selectedIndex);
-        }
-            function clrCreature(){
-            var x = document.getElementById("lstBx");
-            x.innerHTML="";
+
+            function delCreature() {
+                var x = document.getElementById("lstBx");
+                x.remove(x.selectedIndex);
             }
-            function prntCreature(){
-                var selInd= document.getElementById("lstBx").options.selectedIndex;
-                var selOpt= document.getElementById("lstBx").options;
-                var exctVal= selOpt[selInd].index;
-                var exctTxt= selOpt[selInd].text;
-                
-               if(exctTxt === "")
-               {
-                   alert("Please select item from list box");
-               }
-               else
-               {
-                 document.forms['wizForm'].action='Add_data.php';
-                 document.forms['wizForm'].submit();
+            function clrCreature() {
+                var x = document.getElementById("lstBx");
+                x.innerHTML = "";
+            }
+            function prntCreature() {
+                var selInd = document.getElementById("lstBx").options.selectedIndex;
+                var selOpt = document.getElementById("lstBx").options;
+                var exctVal = selOpt[selInd].index;
+                var exctTxt = selOpt[selInd].text;
+
+                if (exctTxt === "")
+                {
+                    alert("Please select item from list box");
+                } else
+                {
+                    document.forms['wizForm'].action = 'Add_data.php';
+                    document.forms['wizForm'].submit();
 //                 window.location="Add_data.php";  
-               }
-            }
-		</script>
-		
-	
-</head>
-<body >
-
-<form name="wizForm" method="post" action="">
-    
-        <input type="checkbox" id="crType" name="CreatureType" value="yes"
-       onclick="showHideShipInfo()">
-<label for="CreatureType">Click to see Creature Type</label>
-        <fieldset style="display:none" id="creinfo">
-	<legend>Creature Type</legend>
-        <input  type="radio" id="CreTpe1" name="alternative1" value="Humanoid" onclick="changeValue()">Humanoid<br>
-        <input  type="radio" id="CreTpe2" name="alternative1" value="Demon">Demon<br>
-        <input  type="radio" id="CreTpe3"  name="alternative1" value="Animal">Animal<br>
-<!--	 <input type="submit" value="Humanoid"><br>
-	 <input type="submit" value="Demon" name="lname"><br>
-         <input type="submit"  value="Animal" id="add1" name="address"><br>-->
-        
-</fieldset>
-
-
-<div  class="lsBtn" style="width:310px"  >    
-<input type="button" onclick="funcAdd()" name="addToScen" value="Add to Scenario">
-</div>
-<div class= "lsBx" >
-    <select id="lstBx"  name="lstBx" size="20" style="width:310px" onchange="selectFunction(this.form)">   
-</select>
-</div>
-<div class="prnBtn">
-   <ul style="display: inline-block;vertical-align: top;">
-        <li><input  type="button" name="print" value="Print" onclick="prntCreature()"></li>
-        <li><input  type="button" name="printall" value="PrintAll"></li>
-        <li><input  type="button" name="delete" value="Delete Creature" onclick="delCreature()"></li>
-        <li><input  type="button" name="clear" value="Clear Creatures" onclick="clrCreature()"></li>
-        <li><input  type="button" name="save" value="Save Scenario"></li>
-        <li><input  type="button" name="recall" value="Recall Scenario"></li>
-    </ul>
-</div>
-<br>
-<br>
-        <input type="checkbox" id="crName" name="CreChkBx" value="yes"
-       onclick="showHideShipInfo()">
-<label for="CreChkBx">Click to see Creature Name</label>
-        <fieldset style="display:none" id="creNmeinfo">
-	<legend>Creature Name</legend>
-        <input  type="radio" id="a1_CreNme" name="CreatureName"  value="Orc">Orc <br>
-        <input  type="radio" id="a2_CreNme" name="CreatureName"  value="Hobgoblin">Hobgoblin<br>
-        <input  type="radio" id="a3_CreNme" name="CreatureName"  value="Goblin">Goblin<br>
-<!--        <input type = "button" id = "alternative1" value="Orc" onClick="changeQuestion('alternative1')">
-	 <input type = "button" id = "alternative2" value="Hobgoblin" onClick="changeQuestion('alternative2')">
-         <input type = "button" id = "alternative3" value="Goblin" onClick="changeQuestion('alternative3')">-->
-  
-</fieldset>
-    <br>
-<br> 
-
-<input type="checkbox" id="attr" name="Attributes" value="yes"
-       onclick="showHideShipInfo()">
-<label>Click to see Attributes</label>
-<fieldset style="display:none" id="billinfo">
-	<legend>Attributes</legend>
-	<label for="lvl">Level</label> 
-        <input type="text" value="" id="lvl" name="lvl"><br>
-	<label for="hp">Hit Points</label> 
-        <input type="text" value="" id="hp" name="hp"><br>
-	<label for="aType">Armor Type</label> 
-        <input type="text" value="" id="aType" name="aType"><br>
-	<label for="aWorn">Armor Worn</label> 
-        <input type="text" value="" id="aWorn" name="aWorn"><br>
-        <label for="wType">Weapon Type</label> 
-        <input type="text" value="" id="wType" name="wType"><br>
-	<label for="dmg">Damage</label> 
-        <input type="text" value="" id="dmg" name="dmg"><br>
-</fieldset>
-<br>
-<br>
-<input type="checkbox" id="shipsame" name="shipsame" value="yes"
-	   onclick="showHideShipInfo()">
-<label for="shipsame">Click to see Notes</label>
-
-<fieldset style="display:none" id="shipinfo">
-	<legend>Notes</legend>
-	<label for="descr">Description</label> 
-        <input type="text" id="descr" name="descr"><br>
-	<label for="bckg">Background</label> 
-        <input type="text" id="bckg" name="bckg"><br>
-	<label for="roleP">Role Playing</label> 
-        <input type="text" id="roleP" name="roleP"><br>
-	<label for="spAtck">Spe Attacks</label> 
-        <input type="text" id="spAtck" name="spAtck"><br>
-        <label for="spDef">Spe Defense</label> 
-        <input type="text" id="spDef" name="spDef"><br>
-	<label for="cNote">class Notes</label>
-        <input type="text" id="cNote" name="cNote"><br>
-        <label for="scen">Scenario notes </label> 
-        <textarea rows="10" cols="40" id="scen" name="scen"></textarea><br>
-        <label id="Test123">test</label>
-</fieldset>
-<br>
-
-
-<!--<input type="submit" value="Next - Confirm Order">-->
-
-</form>
-    <script>
-                   var tempObject={'alternative1':'','CreatureName':'','lvl':0,'hp':0,
-                'aType':'','aWorn':'','wType':'','dmg':'',
-                'descr':'','bckg':'','roleP':'','spAtck':''
-                ,'spDef':'','cNote':'','scen':''};
-		function funcAdd(){
-                    var temp;
-                    var chx = document.getElementsByName('CreatureName');
-                    var chx2= document.getElementsByName('alternative1');
-                    
-                    var indx=0;
-                    for(;indx<chx2.length;indx++){
-                        if(chx[indx].type==='radio' && chx[indx].checked){
-                            
-                        
-                    for (var i=0;i<chx.length;i++){
-                    if(chx[i].type==='radio' && chx[i].checked){   
-                    
-                    var x= document.getElementById("lstBx");
-                    var option;
-                    if ((x.options.length === 0 )){
-                                     
-                            option= document.createElement("option");  
-                            option.text= chx[i].value;
-                            x.add(option);
-                    }
-                    else{
-                        var len = x.options.length;
-                        var count = 0;
-                    for(var y=0; y<len;y++){
-//                            for(var z=0;z<=y;z++){
-                                if(x.options[y].text.match(chx[i].value)){
-
-                                    count++;
-                                    
-                                }
-                    }
-                    var option= document.createElement("option"); 
- 
-                    if (count > 0){
-                        option.text= chx[i].value + '_'+ count ;
-                    }else{
-                        option.text= chx[i].value;
-                    }
-                    
-                    x.add(option);
                 }
-                var listText =option.text;
-                var indxText=chx2[indx].value;
-//               
-//                alert(indxText);
-             tempObject['CreatureName']=i;
-             
-            // alert(tempObject['a1_CreNme']);
-             tempObject['alternative1']=indx;
-            //tempObject['alternative1']=document.getElementsByName('alternative1').value;
-          // alert(tempObject['alternative1']);
-            //tempObject['a1_CreNme']=document.getElementsByName('a1_CreNme').value;
-            tempObject['lvl']=document.getElementsByName('lvl')[0].value;
-            tempObject['hp']=document.getElementsByName('hp')[0].value;
-            tempObject['aType']=document.getElementsByName('aType')[0].value;
-            tempObject['aWorn']=document.getElementsByName('aWorn')[0].value;
-            tempObject['wType']=document.getElementsByName('wType')[0].value;
-            tempObject['dmg']=document.getElementsByName('dmg')[0].value;
-            tempObject['descr']=document.getElementsByName('descr')[0].value;
-            tempObject['bckg']=document.getElementsByName('bckg')[0].value;
-            tempObject['roleP']=document.getElementsByName('roleP')[0].value;
-            tempObject['spAtck']=document.getElementsByName('spAtck')[0].value;
-            tempObject['spDef']=document.getElementsByName('spDef')[0].value;
-            tempObject['cNote']=document.getElementsByName('cNote')[0].value;
-            tempObject['scen']=document.getElementsByName('scen')[0].value;
-           alert("Monster");
-            
-            localStorage.setItem(listText,JSON.stringify(tempObject));
-                break;
             }
-                
-            }
-                        }
-   
-                    }  
-        }
+        </script>
 
-</script>
-</body>
+
+    </head>
+    <body >
+
+        <form name="wizForm" method="post" action="">
+
+            <input type="checkbox" id="crType" name="CreatureType" value="yes"
+                   onclick="showHideShipInfo()">
+            <label for="CreatureType">Click to see Creature Type</label>
+            <fieldset style="display:none" id="creinfo">
+                <legend>Creature Type</legend>
+                <input  type="radio" id="CreTpe1" name="alternative1" value="Humanoid" onclick="changeValue()">Humanoid<br>
+                <input  type="radio" id="CreTpe2" name="alternative1" value="Demon">Demon<br>
+                <input  type="radio" id="CreTpe3"  name="alternative1" value="Animal">Animal<br>
+                <!--	 <input type="submit" value="Humanoid"><br>
+                         <input type="submit" value="Demon" name="lname"><br>
+                         <input type="submit"  value="Animal" id="add1" name="address"><br>-->
+
+            </fieldset>
+
+
+            <div  class="lsBtn" style="width:310px"  >    
+                <input type="button" onclick="funcAdd()" name="addToScen" value="Add to Scenario">
+            </div>
+            <div class= "lsBx" >
+                <select id="lstBx"  name="lstBx" size="20" style="width:310px" onchange="selectFunction(this.form)">   
+                </select>
+            </div>
+            <div class="prnBtn">
+                <ul style="display: inline-block;vertical-align: top;">
+                    <li><input  type="button" name="print" value="Print" onclick="prntCreature()"></li>
+                    <li><input  type="button" name="printall" value="PrintAll"></li>
+                    <li><input  type="button" name="delete" value="Delete Creature" onclick="delCreature()"></li>
+                    <li><input  type="button" name="clear" value="Clear Creatures" onclick="clrCreature()"></li>
+                    <li><input  type="button" name="save" value="Save Scenario"></li>
+                    <li><input  type="button" name="recall" value="Recall Scenario"></li>
+                </ul>
+            </div>
+            <br>
+            <br>
+            <input type="checkbox" id="crName" name="CreChkBx" value="yes"
+                   onclick="showHideShipInfo()">
+            <label for="CreChkBx">Click to see Creature Name</label>
+            <fieldset style="display:none" id="creNmeinfo">
+                <legend>Creature Name</legend>
+                <input  type="radio" id="a1_CreNme" name="CreatureName"  value="Orc">Orc <br>
+                <input  type="radio" id="a2_CreNme" name="CreatureName"  value="Hobgoblin">Hobgoblin<br>
+                <input  type="radio" id="a3_CreNme" name="CreatureName"  value="Goblin">Goblin<br>
+                <!--        <input type = "button" id = "alternative1" value="Orc" onClick="changeQuestion('alternative1')">
+                         <input type = "button" id = "alternative2" value="Hobgoblin" onClick="changeQuestion('alternative2')">
+                         <input type = "button" id = "alternative3" value="Goblin" onClick="changeQuestion('alternative3')">-->
+
+            </fieldset>
+            <br>
+            <br> 
+
+            <input type="checkbox" id="attr" name="Attributes" value="yes"
+                   onclick="showHideShipInfo()">
+            <label>Click to see Attributes</label>
+            <fieldset style="display:none" id="billinfo">
+                <legend>Attributes</legend>
+                <label for="lvl">Level</label> 
+                <input type="text" value="" id="lvl" name="lvl"><br>
+                <label for="hp">Hit Points</label> 
+                <input type="text" value="" id="hp" name="hp"><br>
+                <label for="aType">Armor Type</label> 
+                <input type="text" value="" id="aType" name="aType"><br>
+                <label for="aWorn">Armor Worn</label> 
+                <input type="text" value="" id="aWorn" name="aWorn"><br>
+                <label for="wType">Weapon Type</label> 
+                <input type="text" value="" id="wType" name="wType"><br>
+                <label for="dmg">Damage</label> 
+                <input type="text" value="" id="dmg" name="dmg"><br>
+            </fieldset>
+            <br>
+            <br>
+            <input type="checkbox" id="shipsame" name="shipsame" value="yes"
+                   onclick="showHideShipInfo()">
+            <label for="shipsame">Click to see Notes</label>
+
+            <fieldset style="display:none" id="shipinfo">
+                <legend>Notes</legend>
+                <label for="descr">Description</label> 
+                <input type="text" id="descr" name="descr"><br>
+                <label for="bckg">Background</label> 
+                <input type="text" id="bckg" name="bckg"><br>
+                <label for="roleP">Role Playing</label> 
+                <input type="text" id="roleP" name="roleP"><br>
+                <label for="spAtck">Spe Attacks</label> 
+                <input type="text" id="spAtck" name="spAtck"><br>
+                <label for="spDef">Spe Defense</label> 
+                <input type="text" id="spDef" name="spDef"><br>
+                <label for="cNote">class Notes</label>
+                <input type="text" id="cNote" name="cNote"><br>
+                <label for="scen">Scenario notes </label> 
+                <textarea rows="10" cols="40" id="scen" name="scen"></textarea><br>
+                <label id="Test123">test</label>
+            </fieldset>
+            <br>
+
+
+            <!--<input type="submit" value="Next - Confirm Order">-->
+
+        </form>
+        <script>
+            var tempObject = {'alternative1': '', 'CreatureName': '', 'lvl': 0, 'hp': 0,
+                'aType': '', 'aWorn': '', 'wType': '', 'dmg': '',
+                'descr': '', 'bckg': '', 'roleP': '', 'spAtck': ''
+                , 'spDef': '', 'cNote': '', 'scen': ''};
+            function funcAdd() {
+                var temp;
+                var chx = document.getElementsByName('CreatureName');
+                var chx2 = document.getElementsByName('alternative1');
+
+                var indx = 0;
+                for (; indx < chx2.length; indx++) {
+                    if (chx[indx].type === 'radio' && chx[indx].checked) {
+
+
+                        for (var i = 0; i < chx.length; i++) {
+                            if (chx[i].type === 'radio' && chx[i].checked) {
+
+                                var x = document.getElementById("lstBx");
+                                var option;
+                                if ((x.options.length === 0)) {
+
+                                    option = document.createElement("option");
+                                    option.text = chx[i].value;
+                                    x.add(option);
+                                } else {
+                                    var len = x.options.length;
+                                    var count = 0;
+                                    for (var y = 0; y < len; y++) {
+                                        //                            for(var z=0;z<=y;z++){
+                                        if (x.options[y].text.match(chx[i].value)) {
+
+                                            count++;
+
+                                        }
+                                    }
+                                    var option = document.createElement("option");
+
+                                    if (count > 0) {
+                                        option.text = chx[i].value + '_' + count;
+                                    } else {
+                                        option.text = chx[i].value;
+                                    }
+
+                                    x.add(option);
+                                }
+                                var listText = option.text;
+                                var indxText = chx2[indx].value;
+                                //               
+                                //                alert(indxText);
+                                tempObject['CreatureName'] = i;
+
+                                // alert(tempObject['a1_CreNme']);
+                                tempObject['alternative1'] = indx;
+                                //tempObject['alternative1']=document.getElementsByName('alternative1').value;
+                                // alert(tempObject['alternative1']);
+                                //tempObject['a1_CreNme']=document.getElementsByName('a1_CreNme').value;
+                                tempObject['lvl'] = document.getElementsByName('lvl')[0].value;
+                                tempObject['hp'] = document.getElementsByName('hp')[0].value;
+                                tempObject['aType'] = document.getElementsByName('aType')[0].value;
+                                tempObject['aWorn'] = document.getElementsByName('aWorn')[0].value;
+                                tempObject['wType'] = document.getElementsByName('wType')[0].value;
+                                tempObject['dmg'] = document.getElementsByName('dmg')[0].value;
+                                tempObject['descr'] = document.getElementsByName('descr')[0].value;
+                                tempObject['bckg'] = document.getElementsByName('bckg')[0].value;
+                                tempObject['roleP'] = document.getElementsByName('roleP')[0].value;
+                                tempObject['spAtck'] = document.getElementsByName('spAtck')[0].value;
+                                tempObject['spDef'] = document.getElementsByName('spDef')[0].value;
+                                tempObject['cNote'] = document.getElementsByName('cNote')[0].value;
+                                tempObject['scen'] = document.getElementsByName('scen')[0].value;
+                                alert("Monster");
+
+                                localStorage.setItem(listText, JSON.stringify(tempObject));
+                                break;
+                            }
+
+                        }
+                    }
+
+                }
+            }
+
+        </script>
+    </body>
 </html>	
 
 
