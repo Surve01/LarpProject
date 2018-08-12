@@ -204,6 +204,7 @@
 
         <div class="topnav">
         <a class="active" href="index.php">Home</a>
+         <a href='AddEditCreatures.php'>Add/Edit</a>
         <a href="contact.html">Contact</a>
         <a href="about.html">About</a>
 </div>

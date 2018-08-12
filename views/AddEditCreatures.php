@@ -8,13 +8,24 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <?php include "../PDO/PDOConection.php" ?>
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+       <link rel='stylesheet' href='../main.css'>
+        <link rel='stylesheet' href='../CSS/LARPCSS.css'>
+        <style>
+            radio{
+  border: solid;
+  border: red;
+}
+        </style>
         <title>Add/Edit Creatures</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="../js/SaveEditCreature.js"></script>
     </head>
-    <body>
-
+    <body background="../bgimage.jpg">
+<div class="typewriter">
+  <h1>Never Stop LARPING!</h1>
+</div>
+        <?php include 'header.php'; ?>
 
         <div class ="Container">
 
@@ -38,56 +49,56 @@ and open the template in the editor.
                     </div>
 
                     <div id='addEditPair' class='LabeFieldPair'> 
-                        <label>Creature Name</label>         
+                        <label>Creature Name</label>         <br>
                         <input id='addName' class='addEditText' name='addName' type='text' required>
                     </div>
 
                     <div id='creatureTypePair' class='LabeFieldPair'> 
-                        <label>Creature Type</label>         
+                        <label>Creature Type</label>           <br>
                         <input id='addType' class='addEditText' name='addCreatureType' type='text' required>
                     </div>
 
                     <div  id='monsterBookPair' class='LabeFieldPair'> 
-                        <label>From Monster Book</label>         
+                        <label>From Monster Book</label>          <br> 
                         <input id='addMonsterBook' class='addEditText' type='text' required name='monsterBook'>
                     </div>
                     <div  id='addTerrainPair' class='LabeFieldPair'> 
-                        <label>Terrain</label>         
+                        <label>Terrain</label>           <br>
                         <input id='addTerrain' class='addEditText' type='text' required name='terrain'>
                     </div>
                     <div  id='randomMonsterPair' class='LabeFieldPair'> 
                         <label>Random Monster?</label>         
                         <div id='randomMonster' class='addEditRadio' >
-                            <label>  <input type='radio' required name='randomMonster' value='yes' >Yes</label>
-                            <label>  <input type='radio' required name='randomMonster' value='no' >No</label>
+                            <div class='addRadioDiv'>    <input class='addRadio' type='radio' required name='randomMonster' value='yes' ><label>Yes</label></div>
+                            <div class='addRadioDiv'>     <input class='addRadio' type='radio' required name='randomMonster' value='no' > <label>No</label></div>
 
 
                         </div>
                     </div>
 
                     <div  id='frequencyPair' class='LabeFieldPair'> 
-                        <label>Frequency</label>         
+                      <br>    <label>Frequency</label>           <br> 
                         <input id='addFrequency' class='addEditText' type='text' required name='frequency'>
                     </div>
 
                     <div  id="descriptionPair" class='LabeFieldPair'> 
-                        <label>Description</label>         
+                        <label>Description</label>         <br>    
                         <textarea name='description' class='addEditTextarea' id='addDescription'></textarea>
                     </div>
 
 
                     <div  id="backGroundPair" class='LabeFieldPair'> 
-                        <label>Background</label>         
+                        <label>Background</label>           <br>
                         <textarea name='background' class='addEditTextarea' id='addbackground'></textarea>
                     </div>
 
                     <div  id="specialAttacks" class='LabeFieldPair'> 
-                        <label>Special Attacks</label>         
+                        <label>Special Attacks</label>           <br>
                         <textarea name='specialAttacks' class='addEditTextarea' id='addSpecialAttacks'></textarea>
                     </div>
 
                     <div  id="specialDefense" class='LabeFieldPair'> 
-                        <label>Special Defense</label>         
+                        <label>Special Defense</label>           <br>
                         <textarea name='specialDefense' class='addEditTextarea' id='addspecialDefense'></textarea>
                     </div>
 
