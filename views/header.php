@@ -5,7 +5,7 @@
 </div>
 
         <div class="topnav">
-        <a  href="index.php">Home</a>
+        <a  href="../index.php">Home</a>
          <a class="active"  href='AddEditCreatures.php'>Add/Edit</a>
         <a href="../contact.html">Contact</a>
         <a href="../about.html">About</a>
