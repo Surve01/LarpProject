@@ -86,7 +86,7 @@
 //                {
 //                  if(item_indx===i){
 //                     alert(splt[item_indx]); 
-                    alert(retList[item_indx]);
+//                    alert(retList[item_indx]);
                     localStorage.removeItem(retList[item_indx]);
                      retList.splice(item_indx,1);
 //                     alert(retList);
@@ -314,11 +314,12 @@
         <?php
              $arrCreData= selectCreatureType();
              foreach ($arrCreData as $var){ 
+                 if($var!=""){
                  ?>
         
         <input  type="radio" id="CreTpe1" name="alternative1" value="=<?php echo $var ?>" onclick="getCreatureNameJS()"><?php echo $var ?><br>
         
-             <?php } ?>
+             <?php } }?>
         
         </fieldset>
 
@@ -333,7 +334,7 @@
 <div class="prnBtn">
    <ul style="display: inline-block;vertical-align: top;">
         <li><input  type="button" name="print" value="Print" onclick="prntCreature()"></li>
-        <li><input  type="button" name="printall" value="PrintAll"></li>
+<!--        <li><input  type="button" name="printall" value="PrintAll"></li>-->
         <li><input  type="button" name="delete" value="Delete Creature" onclick="delCreature()"></li>
         <li><input  type="button" name="clear" value="Clear Creatures" onclick="clrCreature()"></li>
 <!--        <li><input  type="button" name="save" value="Save Scenario"></li>
@@ -355,9 +356,10 @@
            document.getElementById("creature_name_div").innerHTML="";
            for(var i = 0; i < creatueNameArr.length; i++)
             {
+                if(creatueNameArr[i] !== ""){
                 document.getElementById("creature_name_div").innerHTML=document.getElementById("creature_name_div").innerHTML+
                 "<br><input type='radio' id='a1_CreNme'  value='"+creatueNameArr[i]+"' name='CreatureName' onclick='populateAtribt()'  >"+creatueNameArr[i]+" ";
-
+            }
             }
            }
  
@@ -460,7 +462,7 @@
                     }
 
 //                     recallList[x.options.length]=option.text;
-                     alert(recallList);
+//                     alert(recallList);
 
                 var listText =option.text;
                 var indxText=chx2[indx].value;             
