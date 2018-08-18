@@ -22,3 +22,13 @@ textarea{
     height:200px;
         
 }
+
+button{
+    padding:5px;
+    border-style:outset;
+    border-color: buttonshadow;
+    border-width: 5px;
+    border-radius: 10px;
+    
+    
+}
